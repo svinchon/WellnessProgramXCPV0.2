@@ -9,7 +9,7 @@
   <description/>
   <url>http://www.emc.com/xcp</url>
   <properties>
-  	<creationDate>2015-02-13T11:19:45.790+0000</creationDate>  	
+    <creationDate>2015-02-13T11:19:45.790+0000</creationDate>
   </properties>
 
 	  
@@ -20,11 +20,14 @@
          <groupId>com.emc.xcp.builder</groupId>
          <artifactId>xcp-import-project</artifactId>
          <version>1.0.4</version>
+      <configuration>
+          <mavenRepoPath>maven/designer</mavenRepoPath>
+        </configuration>
       </plugin>
       <plugin>
          <groupId>com.emc.xcp.builder</groupId>
          <artifactId>xcp-validate</artifactId>
-         <version>1.0.9</version>
+         <version>1.0.10</version>
          <executions>
             <execution>
                <id>xcp-validate</id>
@@ -34,8 +37,9 @@
             </execution>
          </executions>
          <configuration>
-         	<dir>${basedir}\Artifacts</dir>
-         </configuration>
+          <dir>${basedir}/Artifacts</dir>
+          <mavenRepoPath>maven/designer</mavenRepoPath>
+        </configuration>
       </plugin>
       <plugin>
 		 <groupId>org.codehaus.mojo</groupId>
@@ -84,8 +88,9 @@
             </execution>
          </executions>
          <configuration>
-         	<dir>${basedir}\Artifacts</dir>
-         </configuration>
+          <dir>${basedir}/Artifacts</dir>
+          <mavenRepoPath>maven/designer</mavenRepoPath>
+        </configuration>
       </plugin>
 	  <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -162,15 +167,16 @@
             </execution>
          </executions>
          <configuration>
-         	<dir>${basedir}\Artifacts</dir>
-         	<executionEnvironment>
+          <dir>${basedir}/Artifacts</dir>
+          <executionEnvironment>
          		<groupId>com.emc.executionenvironment</groupId>
          		<artifactId>xcp</artifactId>
-         		<version>2.1.5</version>
+         		<version>2.2.0</version>
          	</executionEnvironment>
-         <Manifest>
+          <Manifest>
             <Bundle-ClassPath>.,lib/MyDocumentumUtils.jar</Bundle-ClassPath>
           </Manifest>
+          <mavenRepoPath>maven/designer</mavenRepoPath>
         </configuration>
       </plugin>
 
@@ -187,14 +193,16 @@
             </execution>
          </executions>
          <configuration>
-         	<envId>${envId}</envId>
-         	<dataPolicy>${dataPolicy}</dataPolicy>
-         	<deploymentMethod>${deploymentMethod}</deploymentMethod>
-			<parameters>
-  				<configFileName>${configFileName}</configFileName> 
-				<com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing>${com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing}</com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing>
-  			</parameters>
-         </configuration>
+          <envId>${envId}</envId>
+          <dataPolicy>${dataPolicy}</dataPolicy>
+          <deploymentMethod>${deploymentMethod}</deploymentMethod>
+          <envConfigFile>${envConfigFile}</envConfigFile>
+          <appConfigFile>${appConfigFile}</appConfigFile>
+          <parameters>
+            <com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing>${com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing}</com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing>
+          </parameters>
+          <mavenRepoPath>maven/designer</mavenRepoPath>
+        </configuration>
       </plugin>
 
       <plugin>
@@ -242,7 +250,8 @@
 	        <configuration>
 	           <source>1.6</source>
 	           <target>1.6</target>
-	        </configuration>
+	        <skip>true</skip>
+        </configuration>
 		</plugin>
 		
 
@@ -352,7 +361,7 @@
     <dependency>
       <groupId>com.emc.xcp.ui</groupId>
       <artifactId>Services</artifactId>
-      <version>2.1.0050.2400</version>
+      <version>2.2.0000.2960</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
@@ -366,21 +375,21 @@
     <dependency>
       <groupId>com.emc.xcp.ui</groupId>
       <artifactId>xcp-core</artifactId>
-      <version>2.1.0050.2400</version>
+      <version>2.2.0000.2960</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.ui</groupId>
       <artifactId>xcp-appjs</artifactId>
-      <version>2.1.0050.2400</version>
+      <version>2.2.0000.2960</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.ui</groupId>
       <artifactId>dctm-ui-component-model</artifactId>
-      <version>2.1.0050.1151</version>
+      <version>2.2.0000.1211</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
@@ -401,52 +410,22 @@
     <dependency>
       <groupId>com.emc.xcp.ui</groupId>
       <artifactId>xcp-functions</artifactId>
-      <version>2.1.0050.2400</version>
+      <version>2.2.0000.2960</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.ui</groupId>
       <artifactId>xcp-report-widgets</artifactId>
-      <version>2.1.0050.2400</version>
+      <version>2.2.0000.2960</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>barcode</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>crystalcommon</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>crystalreportsruntime</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>cvom</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>databaseconnectors</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
+    
+    
+    
+    
+    
     <dependency>
       <groupId>com.emc.documentum.bam.thirdparty</groupId>
       <artifactId>icu4j</artifactId>
@@ -454,83 +433,17 @@
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>jai_imageio</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>crystalreportviewers</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>jdbinterface</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>jrcerom</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>keycodedecoder</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>logging</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>pfjgraphics</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>querybuilder</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>webreporting</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>webreporting-jsf</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.emc.documentum.bam.thirdparty</groupId>
-      <artifactId>xmlconnector</artifactId>
-      <version>12.2</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <dependency>
       <groupId>com.oracle</groupId>
       <artifactId>ojdbc6</artifactId>
@@ -538,66 +451,67 @@
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>xpp3</groupId>
-      <artifactId>xpp3</artifactId>
-      <version>1.1.4c</version>
-      <type>jar</type>
-      <scope>runtime</scope>
-    </dependency>
+    
     <dependency>
       <groupId>com.emc.xcp</groupId>
       <artifactId>xcp-ivf-widgets</artifactId>
-      <version>2.1.0050.1788</version>
+      <version>2.2.0000.2064</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.rest</groupId>
       <artifactId>xcp-rest-core</artifactId>
-      <version>2.1.0050.1584</version>
+      <version>2.2.0000.1863</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.rest</groupId>
       <artifactId>xcp-rest-core-types</artifactId>
-      <version>2.1.0050.1584</version>
+      <version>2.2.0000.1863</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.rest</groupId>
       <artifactId>xcp-rest-test-types</artifactId>
-      <version>2.1.0050.1584</version>
+      <version>2.2.0000.1863</version>
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.emc.xcp.rest</groupId>
       <artifactId>xcp-rest-crystalreport</artifactId>
-      <version>2.1.0050.1584</version>
+      <version>2.2.0000.1863</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>xcp</groupId>
       <artifactId>xcpcore</artifactId>
-      <version>2.1.1.201407210533</version>
+      <version>2.2.0.20141105</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>xcpcomm</groupId>
       <artifactId>xcpcommons</artifactId>
-      <version>2.1.1.201407210535</version>
+      <version>2.2.0.20141105</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>xcpui</groupId>
       <artifactId>xcpui</artifactId>
-      <version>2.1.1.201407210533</version>
+      <version>2.2.0.20141105</version>
+      <type>jar</type>
+      <scope>runtime</scope>
+    </dependency>
+  <dependency>
+      <groupId>com.emc.xcp.ui</groupId>
+      <artifactId>xcp-clear-blue-theme</artifactId>
+      <version>2.2.0000.0001</version>
       <type>jar</type>
       <scope>runtime</scope>
     </dependency>

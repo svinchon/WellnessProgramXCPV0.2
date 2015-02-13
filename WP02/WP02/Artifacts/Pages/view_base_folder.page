@@ -297,7 +297,7 @@
                   <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/edit_base_folder.page#/"/>
                 </data>
               </properties>
-              <properties name="redirectUrlModel" value="xcp_dm_folder" entry="//@rootContainer/@children.0/@children.1/@children.3/@properties.1/@action/@propertyMap.4"/>
+              <properties name="redirectUrlModel" value="dm_folder" entry="//@rootContainer/@children.0/@children.1/@children.3/@properties.1/@action/@propertyMap.4"/>
               <propertyMap key="redirectStyle" value="//@rootContainer/@children.0/@children.1/@children.3/@properties.1/@action/@properties.0"/>
               <propertyMap key="actionType" value="//@rootContainer/@children.0/@children.1/@children.3/@properties.1/@action/@properties.1"/>
               <propertyMap key="pageSelectionType" value="//@rootContainer/@children.0/@children.1/@children.3/@properties.1/@action/@properties.2"/>
@@ -409,7 +409,7 @@
         <propertyMap key="xcpId" value="//@rootContainer/@children.1/@children.0/@properties.11"/>
         <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_results_list" parent="//@rootContainer/@children.1/@children.0" widgetEntry="//@widgetMap[key='results_list']" dataService="//@dataSources[name='folderQuery']">
           <properties name="title" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.0"/>
-          <properties name="typeName" value="xcp_dm_folder" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.1"/>
+          <properties name="typeName" value="dm_folder" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.1"/>
           <properties name="modelName" value="xcp_folderQuery_outputs" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.2"/>
           <properties name="storeId" value="folderQuery" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.3"/>
           <properties name="initParams" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.4"/>

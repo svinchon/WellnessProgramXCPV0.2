@@ -18,7 +18,8 @@
     <beans:bean id="repositoryInfoFilter"
                 class="com.emc.xcp.rest.security.filter.RepositoryInfoFilter" >
     </beans:bean>
-
+	
+	<beans:bean id="csrfAuthFilter" class ="com.emc.xcp.rest.security.filter.CSRFTokenFilter"/>
     <beans:import resource="classpath*:META-INF/spring/template/dctm-xcp-ui-security-${rest.security.auth.mode:basic}.xml" />
 
 </beans:beans>

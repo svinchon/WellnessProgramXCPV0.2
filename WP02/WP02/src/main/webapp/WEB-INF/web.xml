@@ -101,7 +101,7 @@
     </filter-mapping>
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
-        <filter-class>com.emc.xcp.ui.web.filter.CharacterEncodingFilter</filter-class>
+        <filter-class>com.emc.xcp.ui.web.filter.CustomCharEncodingFilter</filter-class>
         <init-param>
             <param-name>queryEncoding</param-name>
             <param-value>UTF-8</param-value>
@@ -244,29 +244,6 @@
         <url-pattern>/servlet/InvalidateCache</url-pattern>
     </servlet-mapping>
 
-    <!--  Crystal Report Servlets  -->
-    <servlet>
-        <description>Servlet for xCP Crystal Reports</description>
-        <servlet-name>XcpCrystalReportViewerServlet</servlet-name>
-        <servlet-class>com.emc.xcp.rest.crystalreport.servlet.XcpCrystalReportViewerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>XcpCrystalReportViewerServlet</servlet-name>
-        <url-pattern>/crystalreport/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>CrystalReportViewerServlet</servlet-name>
-        <servlet-class>com.crystaldecisions.report.web.viewer.CrystalReportViewerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>CrystalReportViewerServlet</servlet-name>
-        <url-pattern>/CrystalReportViewerHandler</url-pattern>
-    </servlet-mapping>
-
-
     <!-- Set session timeout to 8 hours -->
     <session-config>
         <session-timeout>480</session-timeout>
@@ -275,4 +252,12 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://www.springframework.org/tags</taglib-uri>
+            <taglib-location>/WEB-INF/tld/spring.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
 </web-app>

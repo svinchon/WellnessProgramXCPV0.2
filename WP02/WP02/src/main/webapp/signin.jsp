@@ -11,6 +11,7 @@
 <%!
 
         private static final String NOMINIFY="nominify";
+        private static final String AUTOMATION="automation";
 
         //ExtJs seems to have some language pack specific to country, below is the list of it.
         private static final Set extCountryLangPacks = new TreeSet();
@@ -33,6 +34,10 @@
     boolean nominify = false;
     if (request.getParameterMap().containsKey(NOMINIFY)) {
         nominify = true;
+    }
+    boolean automation = false;
+    if (request.getParameterMap().containsKey(AUTOMATION)) {
+        automation = true;
     }
 
     Locale clientLocale = request.getLocale();
@@ -68,31 +73,36 @@
 
         <% if (nominify) { %>
             <% if(rtl) { %>
-                 <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default-rtl-debug.css" />
+                 <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default-rtl-debug.css" />
             <% } else { %>
-                  <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default-debug.css" />
+                  <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default-debug.css" />
             <% } %>
         <% } else {  %>
             <% if(rtl) { %>
-                 <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default-rtl.css" />
+                 <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default-rtl.css" />
             <% } else { %>
-                 <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default.css" />
+                 <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default.css" />
             <% } %>
         <% } %>
         <link rel="stylesheet" type="text/css" href="component/xcp-core/xcp_signin/contents-${applicationVersion}.css"/>
 
         <% if(rtl) { %>
-            <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/ext-all-rtl.js"></script>
+            <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/ext-all-rtl.js"></script>
         <% } else { %>
-            <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/ext-all.js"></script>
+            <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/ext-all.js"></script>
         <% } %>
-        <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/locale/ext-lang-<%=extLangFileSuffix%>.js"></script>
-        <script type="text/javascript" src="resources/${applicationVersion}/js/AppConfiguration.js"></script>
+        <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/locale/ext-lang-<%=extLangFileSuffix%>.js"></script>
+        <script type="text/javascript" src="${resourceUrl}/js/AppConfiguration.js"></script>
         <script type="text/javascript">
             xcp.extLangFileSuffix = "<%=extLangFileSuffix%>";
         </script>
-        <script type="text/javascript" src="component/xcp-core/xcp_signin/contents-${applicationVersion}.js?locale=<%=lang%>"></script>
+        <% if(automation) { %>
+            <script type="text/javascript" src="component/xcp-core/xcp_signin/contents-${applicationVersion}.js?locale=<%=lang%>&automation=true&nominify=true"></script>
+        <% } else { %>
+            <script type="text/javascript" src="component/xcp-core/xcp_signin/contents-${applicationVersion}.js?locale=<%=lang%>"></script>
+        <% }  %>
         <script type="text/javascript" src="component/xcp-core/xcp_theme_lib/contents-${applicationVersion}.js?locale=<%=lang%>"></script>
+
 
         <%-- temporary change for window title --%>
         <script type="text/javascript">

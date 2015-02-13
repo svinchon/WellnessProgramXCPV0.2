@@ -86,7 +86,11 @@
             <properties name="xcp_page_sel_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.5"/>
             <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.6"/>
             <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.7"/>
-            <properties name="hidden" value="WP02.user.currentUserRoleLabel=='HealthProgramMember'" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.8"/>
+            <properties name="hidden" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.8">
+              <eventBasedExpressions>
+                <expression exprStr="WP02.user.currentUserRoleLabel=='HealthProgramMember'"/>
+              </eventBasedExpressions>
+            </properties>
             <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.9"/>
             <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.10"/>
             <properties name="xcpId" value="nav_button1" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.11"/>
@@ -118,7 +122,11 @@
             <properties name="xcp_page_sel_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.5"/>
             <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.6"/>
             <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.7"/>
-            <properties name="hidden" value="WP02.user.currentUserRoleLabel=='HealthProgramMember'" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.8"/>
+            <properties name="hidden" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.8">
+              <eventBasedExpressions>
+                <expression exprStr="WP02.user.currentUserRoleLabel=='HealthProgramMember'"/>
+              </eventBasedExpressions>
+            </properties>
             <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.9"/>
             <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.10"/>
             <properties name="xcpId" value="nav_button2" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.11"/>

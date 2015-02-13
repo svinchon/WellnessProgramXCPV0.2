@@ -1,3 +1,71 @@
+<%!
+/*
+ * Ensure there is no output (not even whitespace) till the if condition for validParams check
+ */
+    private static final String COMPONENT_LOAD_MODE = "mode";
+    private static final String LOGGING_MODE = "logging";
+    private static final String NOMINIFY = "nominify";
+    private static final String WEBBY_MODE = "webby";
+    private static final String AUTOMATION = "automation";
+
+    private Boolean getBooleanParam(ServletRequest req, String param, boolean defaultValue) {
+        param = req.getParameter(param);
+        if ("".equals(param)) {
+            return defaultValue;
+        }
+        if (param != null && !"true".equals(param) && !"false".equals(param)) {
+            return null;
+        } else {
+            return Boolean.valueOf(param);
+        }
+    }
+%><%
+    boolean validParams = true;
+
+    String componentLoadMode = request.getParameter(COMPONENT_LOAD_MODE);
+    if (componentLoadMode == null || componentLoadMode.length() == 0) {
+        Cookie cookies[] = request.getCookies();
+        if (cookies != null && cookies.length > 0 ) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals(COMPONENT_LOAD_MODE)) {
+                    componentLoadMode = cookie.getValue();
+                    break;
+                }
+            }
+        }
+    }
+    if (componentLoadMode == null || componentLoadMode.trim().length() == 0) {
+        componentLoadMode = "production";
+    }
+    if (!"production".equals(componentLoadMode) && !"development".equals(componentLoadMode) && !"ondemand".equals(componentLoadMode)) {
+        validParams = false;
+    }
+
+    Boolean nominify = getBooleanParam(request, NOMINIFY, true);
+    if (nominify == null) {
+        validParams = false;
+    }
+
+    Boolean webbyMode = getBooleanParam(request, WEBBY_MODE, true);
+    if (webbyMode == null) {
+        validParams = false;
+    }
+
+    Boolean loggingMode = getBooleanParam(request, LOGGING_MODE, false);
+    if (loggingMode == null) {
+        validParams = false;
+    }
+
+    Boolean automation = getBooleanParam(request, AUTOMATION, true);
+    if (automation == null) {
+        validParams = false;
+    }
+
+    if (!validParams) {
+        response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+        response.getWriter().println("Invalid request parameters");
+    } else {
+%>
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!--
@@ -10,11 +78,6 @@
 <%@ page import="java.awt.ComponentOrientation" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%!
-    private static final String COMPONENT_LOAD_MODE="mode";
-    private static final String LOGGING_MODE = "logging";
-    private static final String NOMINIFY="nominify";
-    private static final String WEBBY_MODE="webby";
-
     //ExtJs seems to have some language pack specific to country, below is the list of it.
     private static final TreeMap<String, String> extCountryLangPacks = new TreeMap<String, String>();
     private static final Set ckEditorCountryLangPacks = new TreeSet();
@@ -173,47 +236,11 @@
         tzJSON.append("}");
         return tzJSON.toString();
     }
-
 %>
 <%
-    String componentLoadMode = request.getParameter(COMPONENT_LOAD_MODE);
-    if (componentLoadMode == null || componentLoadMode.length() == 0) {
-        Cookie cookies[] = request.getCookies();
-        if (cookies != null && cookies.length > 0 ) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals(COMPONENT_LOAD_MODE)) {
-                    componentLoadMode = cookie.getValue();
-                    break;
-                }
-            }
-        }
-    }
-    if (componentLoadMode == null) {
-        componentLoadMode = "production";
-        //componentLoadMode = "development";
-        //componentLoadMode = "ondemand";
-
-    }
-
-    boolean nominify = false;
-    if (request.getParameterMap().containsKey(NOMINIFY)) {
-        nominify = true;
-    }
-
-    boolean webbyMode = false;
-    if(request.getParameterMap().containsKey(WEBBY_MODE)) {
-        webbyMode = true;
-    }
-
     String extJSMode = "";
     if (!componentLoadMode.equals("production")) {
         extJSMode="-debug";
-    }
-
-    String loggingMode = request.getParameter(LOGGING_MODE);
-    if(loggingMode == null || loggingMode.length() == 0)
-    {
-        loggingMode = "false";
     }
 
     Locale clientLocale = request.getLocale();
@@ -254,49 +281,53 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script type="text/javascript">
+        window.applicationRead = false;
+    </script>
+
 
     <% if (nominify) { %>
     <% if(rtl) { %>
-    <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default-rtl-debug.css" />
+    <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default-rtl-debug.css" />
     <% } else { %>
-    <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default-debug.css" />
+    <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default-debug.css" />
     <% } %>
     <% } else {  %>
     <% if(rtl) { %>
-    <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default-rtl.css" />
+    <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default-rtl.css" />
     <% } else { %>
-    <link rel="stylesheet" type="text/css" href="resources/${applicationVersion}/js/resources/css/xcp-default.css" />
+    <link rel="stylesheet" type="text/css" href="${resourceUrl}/js/resources/css/xcp-default.css" />
     <% } %>
     <% } %>
 
     <link rel="stylesheet" type="text/css" href="component/contents-${applicationVersion}.css?locale=<%=lang%>"/>
 
-    <% if(loggingMode.equals("true")) { %>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/firebug-lite/dist/xcp-firebug-lite.js"></script>
+    <% if(loggingMode) { %>
+    <script type="text/javascript" src="${resourceUrl}/js/firebug-lite/dist/xcp-firebug-lite.js"></script>
     <% } %>
 
     <% if (nominify) { %>
     <% if (rtl) { %>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/ext-all-rtl-dev.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/ext-all-rtl-dev.js"></script>
     <% } else { %>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/ext-all-dev.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/ext-all-dev.js"></script>
     <% } %>
     <% } else {  %>
     <% if (rtl) { %>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/ext-all-rtl.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/ext-all-rtl.js"></script>
     <% } else { %>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/ext-all.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/ext-all.js"></script>
     <% } %>
     <% } %>
 
     <% if (extJSMode.equals("-debug")) { %>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/src/diag/layout/Context.js"></script>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/src/diag/layout/ContextItem.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/src/diag/layout/Context.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/src/diag/layout/ContextItem.js"></script>
     <% } %>
 
-    <script type="text/javascript" src="resources/${applicationVersion}/js/ext-4.2/locale/ext-lang-<%=extLangFileSuffix%>.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/ext-4.2/locale/ext-lang-<%=extLangFileSuffix%>.js"></script>
     <script type="text/javascript" src="component/xcp-core/openajax/lib/openajax/OpenAjax.js"></script>
-    <script type="text/javascript" src="resources/${applicationVersion}/js/AppConfiguration.js"></script>
+    <script type="text/javascript" src="${resourceUrl}/js/AppConfiguration.js"></script>
     <%-- temporary change for window title --%>
     <script type="text/javascript">
         document.title = xcp.appContext.name;
@@ -372,13 +403,13 @@
 
         Ext.onReady(function() {
             xcp.Startup.start({
-                componentLoadMode : '<%=componentLoadMode.replaceAll("[^a-zA-Z0-9._-]", "")%>',
+                componentLoadMode : '<%=componentLoadMode%>',
                 nominify: <%=nominify%>,
                 rtl: <%=rtl%>,
-                webbyMode: <%=webbyMode%>
+                webbyMode: <%=webbyMode%>,
+                automation: <%=automation%>
             });
-            if(console && console.firebuglite)
-            {
+            if(console && console.firebuglite) {
                 xcp.Logger.fireEvent("enablelogging");
             }
         });
@@ -393,3 +424,4 @@
 
 </body>
 </html>
+<% } %>

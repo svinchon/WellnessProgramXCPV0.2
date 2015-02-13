@@ -153,7 +153,7 @@
                   <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/view_base_folder.page#/"/>
                 </data>
               </properties>
-              <properties name="redirectUrlModel" value="xcp_dm_folder" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.7"/>
+              <properties name="redirectUrlModel" value="dm_folder" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.7"/>
               <propertyMap key="defaultConfirmationPrompt" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.0"/>
               <propertyMap key="showConfirmation" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.1"/>
               <propertyMap key="redirectStyle" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.2"/>

@@ -268,10 +268,53 @@
         <property name="resourceManager" ref="sessionVarResourceManager"/>
         <property name="fileName" value="session_variable_data"/>
     </bean>
+    <bean id ="allJSONView" class="com.emc.xcp.ui.services.MultiJsonFileView">
+        <property name="requestContextAttribute" value="requestContext"/>
+        <property name="fileIdentites">
+            <list>
+                 <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                     <property name="fileName" value="application_parameter_data"/>
+                     <property name="id" value="application_parameter_data"/>
+                     <property name="resourceManager" ref="appParamResourceManager"/>
+                 </bean>
+                <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                    <property name="fileName" value="session_variable_data"/>
+                    <property name="id" value="session_variable_data"/>
+                    <property name="resourceManager" ref="sessionVarResourceManager"/>
+                </bean>
+                <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                    <property name="fileName" value="facet_data"/>
+                    <property name="id" value="facet_data"/>
+                    <property name="resourceManager" ref="facetsResourceManager"/>
+                </bean>
+                <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                    <property name="fileName" value="types_data"/>
+                    <property name="id" value="types_data"/>
+                    <property name="resourceManager" ref="typesResourceManager"/>
+                </bean>
+                <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                    <property name="fileName" value="user_defined_actions"/>
+                    <property name="id" value="user_defined_actions"/>
+                    <property name="resourceManager" ref="userDefinedActionResourceManager"/>
+                </bean>
+                <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                    <property name="fileName" value="picklist_data"/>
+                    <property name="id" value="picklist_data"/>
+                    <property name="resourceManager" ref="picklistResourceManager"/>
+                </bean>
+                <bean class="com.emc.xcp.ui.services.support.ResourceIdentity">
+                    <property name="fileName" value="context_menu_config"/>
+                    <property name="id" value="context_menu_config"/>
+                    <property name="resourceManager" ref="contextMenuResourceManager"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
     <bean id="jsView" class="com.emc.xcp.ui.services.JavaScriptFileView">
         <property name="requestContextAttribute" value="requestContext"/>
         <property name="resourceManager" ref="jsResourceManager"/>
         <property name="fileName" value="AppConfiguration"/>
+        <property name="cacheSeconds" value="#{runtimeConfig.StaticApplicationResourceCacheSeconds}"/>
     </bean>
 
     <mvc:interceptors>
@@ -297,6 +340,8 @@
     <mvc:view-controller path="/resources/{application['version']}/ui/sessionVar" view-name="sessionVarView"/>
 	<mvc:view-controller path="/resources/{application['version']}/ui/user_defined_actions" view-name="userDefinedActionView"/>
     <mvc:view-controller path="/resources/{application['version']}/ui/appParam" view-name="appParamView"/>
+    <mvc:view-controller path="/resources/{application['version']}/ui/allJSONs" view-name="allJSONView"/>
+
     <mvc:view-controller path="/resources/{application['version']}/js/AppConfiguration.js" view-name="jsView"/>
 
 </beans>

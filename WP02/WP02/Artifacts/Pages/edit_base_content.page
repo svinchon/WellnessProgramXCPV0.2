@@ -130,8 +130,16 @@
           </properties>
           <properties name="hstretch" value="" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.6"/>
           <properties name="store" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.7"/>
-          <properties name="hidden" value="length(dm_document.r_lock_owner) == 0" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.8"/>
-          <properties xsi:type="uitemplate:DataboundProperty" name="value" value="lockStatus(dm_document.r_lock_date, dm_document.r_lock_owner)" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.9"/>
+          <properties name="hidden" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.8">
+            <eventBasedExpressions>
+              <expression exprStr="length(dm_document.r_lock_owner) == 0"/>
+            </eventBasedExpressions>
+          </properties>
+          <properties xsi:type="uitemplate:DataboundProperty" name="value" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.9">
+            <eventBasedExpressions>
+              <expression exprStr="lockStatus(dm_document.r_lock_date, dm_document.r_lock_owner)"/>
+            </eventBasedExpressions>
+          </properties>
           <properties xsi:type="uitemplate:ObjectProperty" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.10">
             <formatter/>
           </properties>
@@ -539,7 +547,7 @@
                           <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/view_base_content.page#/"/>
                         </data>
                       </properties>
-                      <properties name="redirectUrlModel" value="xcp_dm_document" entry="//@rootContainer/@children.2/@children.0/@children.0/@children.0/@children.6/@children.0/@children.0/@properties.1/@action/@propertyMap.7"/>
+                      <properties name="redirectUrlModel" value="dm_document" entry="//@rootContainer/@children.2/@children.0/@children.0/@children.0/@children.6/@children.0/@children.0/@properties.1/@action/@propertyMap.7"/>
                       <propertyMap key="defaultConfirmationPrompt" value="//@rootContainer/@children.2/@children.0/@children.0/@children.0/@children.6/@children.0/@children.0/@properties.1/@action/@properties.0"/>
                       <propertyMap key="showConfirmation" value="//@rootContainer/@children.2/@children.0/@children.0/@children.0/@children.6/@children.0/@children.0/@properties.1/@action/@properties.1"/>
                       <propertyMap key="redirectStyle" value="//@rootContainer/@children.2/@children.0/@children.0/@children.0/@children.6/@children.0/@children.0/@properties.1/@action/@properties.2"/>

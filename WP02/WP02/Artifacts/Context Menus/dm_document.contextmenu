@@ -29,7 +29,7 @@
             <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/view_base_content.page#/"/>
           </data>
         </properties>
-        <properties name="redirectUrlModel" value="xcp_dm_document" entry="//@items.0/@actionProperties.2/@action/@propertyMap.4"/>
+        <properties name="redirectUrlModel" value="dm_document" entry="//@items.0/@actionProperties.2/@action/@propertyMap.4"/>
         <propertyMap key="redirectStyle" value="//@items.0/@actionProperties.2/@action/@properties.0"/>
         <propertyMap key="actionType" value="//@items.0/@actionProperties.2/@action/@properties.1"/>
         <propertyMap key="pageSelectionType" value="//@items.0/@actionProperties.2/@action/@properties.2"/>
@@ -128,7 +128,7 @@
             <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/edit_base_content.page#/"/>
           </data>
         </properties>
-        <properties name="redirectUrlModel" value="xcp_dm_document" entry="//@items.10/@actionProperties.2/@action/@propertyMap.4"/>
+        <properties name="redirectUrlModel" value="dm_document" entry="//@items.10/@actionProperties.2/@action/@propertyMap.4"/>
         <propertyMap key="redirectStyle" value="//@items.10/@actionProperties.2/@action/@properties.0"/>
         <propertyMap key="actionType" value="//@items.10/@actionProperties.2/@action/@properties.1"/>
         <propertyMap key="pageSelectionType" value="//@items.10/@actionProperties.2/@action/@properties.2"/>
