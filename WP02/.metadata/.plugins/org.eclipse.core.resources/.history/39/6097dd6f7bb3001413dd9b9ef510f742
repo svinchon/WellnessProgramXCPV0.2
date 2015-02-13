@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsDatatypes:BusinessObject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" urn="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/trigger1.businessobj" categoryId="com.emc.xcp.artifact.bo" name="trigger1" label="Trigger1">
+  <accessControlPolicy inheritedFromParentFolder="true"/>
+  <defaultFolderPath/>
+  <superType xsi:type="nsDatatypes:BusinessObject" href="urn:xcp:com.emc.xcp.artifact.bo:Artifacts/Business Objects/rootbo.businessobj#/"/>
+</nsDatatypes:BusinessObject>

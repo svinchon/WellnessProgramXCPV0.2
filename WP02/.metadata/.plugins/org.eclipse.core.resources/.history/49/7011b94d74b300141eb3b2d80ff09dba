@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Require-Bundle: xcpcomm.xcpcommons;bundle-version="2.1.1", xcp.xcpcore
+ ;bundle-version="2.1.1", xcpui.xcpui;bundle-version="2.1.1"
+Bundle-ClassPath: .
+Bundle-Version: 1.0.0.201502131119
+EMC-XCP-ExecutionEnvironment: com.emc.executionenvironment.xcp:2.1.5
+Bundle-Name: WP02
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: wp02.WP02
+NAMESPACE: wp02
+

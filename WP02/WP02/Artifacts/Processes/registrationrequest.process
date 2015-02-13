@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsProcess:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsActivity="http://documentum.com/bpm/activity" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsCommon="http://documentum.com/common" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsProcess="http://documentum.com/bpm/process" urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/registrationrequest.process" categoryId="com.emc.ide.artifact.process" name="registrationrequest" label="RegistrationRequest" description="" webServiceTargetNamespace="HealthProgram" workflowInstructions="">
+  <activities name="Start from Web Service" activityType="INITIATE" description="" priority="Medium" taskName="" taskInstructions="" destFlows="//@flows[name='L10']">
+    <trigger expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="event_start_integration_32_proc.png">
+      <topLeftPoint x="50" y="226"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:InboundInitiatePerformerConfiguration" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>WS Inbound - Initiate&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceInboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceInboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MODEL_TYPE&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[PROCESS_FIRST_MODEL]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WSDL_URL&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>TARGET_NAMESPACE_URI&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgram]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORT_TYPE&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgram]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAME&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[SubmitRegistration]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>SOAP_ACTION&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CONFIG_COMPARATOR_PARAMETER_NAMES&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[TARGET_NAMESPACE_URI,PORT_TYPE,OPERATION_NAME]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OUTPUT_MESSAGE_NAME&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OUTPUT_MESSAGE_NAMESPACE_URI&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WSDL_FILE_OBJECT_ID&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CONTENT_BASED_CORRELATION&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CORRELATION_SET_NAME_FROM_CONFIG_PANEL&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WS_SECURITY_BASIC_AUTHENTICATION&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_USERNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_PASSWORD_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MTOM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_IS_PASSWORD_DIGEST&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[true]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules/>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;"/>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+  </activities>
+  <activities name="Create Member" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L4']" destFlows="//@flows[name='L5']">
+    <trigger numOfInputFlows="1" expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoint_48x32_proc.png">
+      <topLeftPoint x="410" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Create&lt;/Name>&#xA;    &lt;RuntimeModuleName>CreateRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>CreateDesigntimeModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CREATE_FROM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[CREATE_FROM_MODEL]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MODEL_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MODEL_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[Member]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MODEL_TYPE_NAME&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[wp02_member]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>DESTINATION&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[DESTINATION_DEFAULT_LOCATION]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>25&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;HPM&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/name&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>73&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/first_name&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}first_name&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/last_name&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}last_name&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>105&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/gender&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}gender&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>121&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/email&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}email&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>137&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/age&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}age&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>153&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/weight&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}weight&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>185&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/login&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/create/{member}login&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Initiate" activityType="INITIATE" priority="Medium" taskName="" taskInstructions="" destFlows="//@flows[name='L1']">
+    <trigger canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <uiinfo imageScale="100" image="palette/event_start_32_proc.png">
+      <topLeftPoint x="50" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:DefaultInitiatePerformerConfiguration"/>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <taskContract categoryId="com.emc.ide.artifact.process.activity.taskcontract" name="registrationrequest_initiate" label="Initiate">
+      <dataServiceContracts xsi:type="nsDataserviceContract:DataActionContract" categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_create_processregistration_initiate" label="Initiate Process RegistrationRequest" implCategoryId="com.emc.ide.artifact.process.activity.taskcontract">
+        <inputs xsi:type="nsDataserviceContract:StructureElement" name="processVariables" label="Variables">
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="age" label="age">
+            <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="email" label="email">
+            <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="email_count" label="email_count">
+            <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="email_type" label="email_type">
+            <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="first_name" label="first_name">
+            <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="gender" label="gender">
+            <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="last_name" label="last_name">
+            <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="login" label="login">
+            <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+          </elements>
+          <elements xsi:type="nsDataserviceContract:AttributeElement" name="weight" label="weight">
+            <attributeType xsi:type="nsAttributeDatatypes:FloatType"/>
+          </elements>
+        </inputs>
+        <inputs xsi:type="nsDataserviceContract:AttributeElement" name="attachments" label="Attachments" repeating="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </inputs>
+        <primaryElement name="processregistration_initiate" dataModel="//@activities[name='Initiate']/@taskContract"/>
+        <actionType type="Create"/>
+      </dataServiceContracts>
+    </taskContract>
+  </activities>
+  <activities name="Get Users With Same Email" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L3']" destFlows="//@flows[name='L2']">
+    <trigger numOfInputFlows="1" expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
+      <topLeftPoint x="222" y="156"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>DQL Read&lt;/Name>&#xA;    &lt;RuntimeModuleName>DQLOutboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>DQLOutboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>DOCBASE_CHECK_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>QUERY_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[select * from wp02_member where email=?]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/dctm.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ACTIVITY_TYPE_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[READ]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[DCTM]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USERDATATYPES_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>COLUMNALIAS_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[param1=2[S]]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>25&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/email&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Parameters/param1&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Count&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>174&lt;/XPosition>&#xA;                &lt;YPosition>168&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Collection/Object[ALL]/r_object_id&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Process Data/Variables/email_count&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/OutputMsgCopyRules>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Decision Split" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L2']" destFlows="//@flows[name='L4'] //@flows[name='L7']">
+    <trigger expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:ConditionalTransition">
+      <resolver>
+        <conditions name="RouteCase">
+          <conditionExpression exprStr="process.Variables.email_count==0"/>
+          <returnValues xsi:type="nsCommon:InternalReferenceResolutionConfig">
+            <reference refValue="//@flows[name='L4']"/>
+          </returnValues>
+        </conditions>
+        <conditions name="EXCEPTIONAL">
+          <returnValues xsi:type="nsCommon:InternalReferenceResolutionConfig">
+            <reference refValue="//@flows[name='L7']"/>
+          </returnValues>
+        </conditions>
+      </resolver>
+    </transition>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="decision_split_32_proc.png">
+      <topLeftPoint x="316" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:NoOpOutboundPerformerConfiguration" timeout="60">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Create DCTM User" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L5']" destFlows="//@flows[name='L6']">
+    <trigger expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
+      <topLeftPoint x="499" y="156"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>DQL Write&lt;/Name>&#xA;    &lt;RuntimeModuleName>DQLOutboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>DQLOutboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>DOCBASE_CHECK_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>QUERY_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[CREATE dm_user OBJECT&#xA;SET user_name = ?&#xA;SET user_address = ?&#xA;SET description = 'Member'&#xA;SET user_source = 'inline password'&#xA;SET user_login_name = ?&#xA;SET user_password='demo.demo'&#xA;SET user_state = 0]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/dctm.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ACTIVITY_TYPE_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WRITE]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[DCTM]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USERDATATYPES_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>COLUMNALIAS_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[param1=2[S],param2=2[S],param3=2[S]]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>25&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/login&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Parameters/param1&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>41&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/email&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Parameters/param2&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>57&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/login&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Parameters/param3&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Join" activityType="END" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L9'] //@flows[name='L8']">
+    <trigger numOfInputFlows="1" expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="decision_join_32_proc.png">
+      <topLeftPoint x="827" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:NoOpOutboundPerformerConfiguration" timeout="60">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Send ERROR Mail" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L7']" destFlows="//@flows[name='L9']">
+    <trigger expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
+      <topLeftPoint x="703" y="223"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://xpressionhelper.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[strPublishDocumentResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xPressionHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[strPublishDocumentRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://xpressionhelper.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[strPublishDocument]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xPressionHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;HealthProgram.xdrwv&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://xpressionhelper.diy.com}ns0:strPublishDocument/[1,S]{http://xpressionhelper.diy.com}ns0:strTemplateName&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Concat&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>105&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot; ERROR&quot;&lt;/Value>&#xA;                &lt;Value>&quot;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&amp;lt;Documents&amp;gt;&amp;lt;Document&amp;gt;&amp;lt;requestInfo&amp;gt;&amp;lt;uniqueIdentifier&amp;gt;Req_001_2014-06-05&amp;lt;/uniqueIdentifier&amp;gt;&amp;lt;processingDate&amp;gt;2014-12-31&amp;lt;/processingDate&amp;gt;&amp;lt;customerLanguage&amp;gt;French&amp;lt;/customerLanguage&amp;gt;&amp;lt;templateName&amp;gt;FortuRama.xword&amp;lt;/templateName&amp;gt;&amp;lt;templateEffectiveDate&amp;gt;2014-12-31&amp;lt;/templateEffectiveDate&amp;gt;&amp;lt;desiredPrimaryChanel&amp;gt;Email&amp;lt;/desiredPrimaryChanel&amp;gt;&amp;lt;distibutionParameter1&amp;gt;ZZZ&amp;lt;/distibutionParameter1&amp;gt;&amp;lt;distibutionParameter2&amp;gt;ZZZ&amp;lt;/distibutionParameter2&amp;gt;&amp;lt;distibutionParameter3&amp;gt;ZZZ&amp;lt;/distibutionParameter3&amp;gt;&amp;lt;distibutionParameter4&amp;gt;ERROR&amp;lt;/distibutionParameter4&amp;gt;&amp;lt;distibutionParameter5&amp;gt;ZZZ&amp;lt;/distibutionParameter5&amp;gt;&amp;lt;outputProfilName/&amp;gt;&amp;lt;/requestInfo&amp;gt;&amp;lt;employeeInfo&amp;gt;&amp;lt;firstName&amp;gt;&quot;&lt;/Value>&#xA;                &lt;Value>/Process Data/Variables/first_name&lt;/Value>&#xA;                &lt;Value>&quot;&amp;lt;/firstName&amp;gt;&amp;lt;lastName&amp;gt;Vinchon&amp;lt;/lastName&amp;gt;&amp;lt;gender&amp;gt;M&amp;lt;/gender&amp;gt;&amp;lt;title&amp;gt;Baron&amp;lt;/title&amp;gt;&amp;lt;email&amp;gt;sebastien.vinchon@emc.com&amp;lt;/email&amp;gt;&amp;lt;/employeeInfo&amp;gt;&amp;lt;employeeHealthProgramGoals&amp;gt;&amp;lt;weigthLoss&amp;gt;10&amp;lt;/weigthLoss&amp;gt;&amp;lt;ExerciceTime&amp;gt;2&amp;lt;/ExerciceTime&amp;gt;&amp;lt;AverageCaloriesEatenDaily&amp;gt;1700&amp;lt;/AverageCaloriesEatenDaily&amp;gt;&amp;lt;/employeeHealthProgramGoals&amp;gt;&amp;lt;employeeHealthProgramCurrentResutls&amp;gt;&amp;lt;weigthLoss&amp;gt;2&amp;lt;/weigthLoss&amp;gt;&amp;lt;ExerciceTime&amp;gt;5&amp;lt;/ExerciceTime&amp;gt;&amp;lt;AverageCaloriesEatenDaily&amp;gt;1800&amp;lt;/AverageCaloriesEatenDaily&amp;gt;&amp;lt;/employeeHealthProgramCurrentResutls&amp;gt;&amp;lt;employeeHealthProgramCurrentRating&amp;gt;&amp;lt;WeightLoss&amp;gt;20%&amp;lt;/WeightLoss&amp;gt;&amp;lt;ExerciceTime&amp;gt;250%&amp;lt;/ExerciceTime&amp;gt;&amp;lt;AverageCaloriesEatenDaily&amp;gt;106%&amp;lt;/AverageCaloriesEatenDaily&amp;gt;&amp;lt;CurrentRatingOnAverage&amp;gt;Making significant efforts but still work to be done&amp;lt;/CurrentRatingOnAverage&amp;gt;&amp;lt;/employeeHealthProgramCurrentRating&amp;gt;&amp;lt;/Document&amp;gt;&amp;lt;Documents&amp;gt;&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://xpressionhelper.diy.com}ns0:strPublishDocument/[1,S]{http://xpressionhelper.diy.com}ns0:strData&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>121&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;HealthProgram.HTMLToSMTP&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://xpressionhelper.diy.com}ns0:strPublishDocument/[1,S]{http://xpressionhelper.diy.com}ns0:strOutputProfileName&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Send Welcome Mail" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L11']" destFlows="//@flows[name='L8']">
+    <trigger expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
+      <topLeftPoint x="707" y="156"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://xpressionhelper.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[strPublishDocumentResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xPressionHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[strPublishDocumentRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://xpressionhelper.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[strPublishDocument]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xPressionHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;HealthProgram.xdrwv&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://xpressionhelper.diy.com}ns0:strPublishDocument/[1,S]{http://xpressionhelper.diy.com}ns0:strTemplateName&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Concat&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>105&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&amp;lt;Documents&amp;gt;&amp;lt;Document&amp;gt;&amp;lt;requestInfo&amp;gt;&amp;lt;uniqueIdentifier&amp;gt;Req_001_2014-06-05&amp;lt;/uniqueIdentifier&amp;gt;&amp;lt;processingDate&amp;gt;2014-12-31&amp;lt;/processingDate&amp;gt;&amp;lt;customerLanguage&amp;gt;French&amp;lt;/customerLanguage&amp;gt;&amp;lt;templateName&amp;gt;FortuRama.xword&amp;lt;/templateName&amp;gt;&amp;lt;templateEffectiveDate&amp;gt;2014-12-31&amp;lt;/templateEffectiveDate&amp;gt;&amp;lt;desiredPrimaryChanel&amp;gt;Email&amp;lt;/desiredPrimaryChanel&amp;gt;&amp;lt;distibutionParameter1&amp;gt;ZZZ&amp;lt;/distibutionParameter1&amp;gt;&amp;lt;distibutionParameter2&amp;gt;ZZZ&amp;lt;/distibutionParameter2&amp;gt;&amp;lt;distibutionParameter3&amp;gt;ZZZ&amp;lt;/distibutionParameter3&amp;gt;&amp;lt;distibutionParameter4&amp;gt;SUCCESS&amp;lt;/distibutionParameter4&amp;gt;&amp;lt;distibutionParameter5&amp;gt;ZZZ&amp;lt;/distibutionParameter5&amp;gt;&amp;lt;outputProfilName/&amp;gt;&amp;lt;/requestInfo&amp;gt;&amp;lt;employeeInfo&amp;gt;&amp;lt;firstName&amp;gt; &quot;&lt;/Value>&#xA;                &lt;Value>/Process Data/Variables/first_name&lt;/Value>&#xA;                &lt;Value>&quot;&amp;lt;/firstName&amp;gt;&amp;lt;lastName&amp;gt;Vinchon&amp;lt;/lastName&amp;gt;&amp;lt;gender&amp;gt;M&amp;lt;/gender&amp;gt;&amp;lt;title&amp;gt;Baron&amp;lt;/title&amp;gt;&amp;lt;email&amp;gt;sebastien.vinchon@emc.com&amp;lt;/email&amp;gt;&amp;lt;/employeeInfo&amp;gt;&amp;lt;employeeHealthProgramGoals&amp;gt;&amp;lt;weigthLoss&amp;gt;10&amp;lt;/weigthLoss&amp;gt;&amp;lt;ExerciceTime&amp;gt;2&amp;lt;/ExerciceTime&amp;gt;&amp;lt;AverageCaloriesEatenDaily&amp;gt;1700&amp;lt;/AverageCaloriesEatenDaily&amp;gt;&amp;lt;/employeeHealthProgramGoals&amp;gt;&amp;lt;employeeHealthProgramCurrentResutls&amp;gt;&amp;lt;weigthLoss&amp;gt;2&amp;lt;/weigthLoss&amp;gt;&amp;lt;ExerciceTime&amp;gt;5&amp;lt;/ExerciceTime&amp;gt;&amp;lt;AverageCaloriesEatenDaily&amp;gt;1800&amp;lt;/AverageCaloriesEatenDaily&amp;gt;&amp;lt;/employeeHealthProgramCurrentResutls&amp;gt;&amp;lt;employeeHealthProgramCurrentRating&amp;gt;&amp;lt;WeightLoss&amp;gt;20%&amp;lt;/WeightLoss&amp;gt;&amp;lt;ExerciceTime&amp;gt;250%&amp;lt;/ExerciceTime&amp;gt;&amp;lt;AverageCaloriesEatenDaily&amp;gt;106%&amp;lt;/AverageCaloriesEatenDaily&amp;gt;&amp;lt;CurrentRatingOnAverage&amp;gt;Making significant efforts but still work to be done&amp;lt;/CurrentRatingOnAverage&amp;gt;&amp;lt;/employeeHealthProgramCurrentRating&amp;gt;&amp;lt;/Document&amp;gt;&amp;lt;Documents&amp;gt;&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://xpressionhelper.diy.com}ns0:strPublishDocument/[1,S]{http://xpressionhelper.diy.com}ns0:strData&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>121&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;HealthProgram.HTMLToSMTP&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://xpressionhelper.diy.com}ns0:strPublishDocument/[1,S]{http://xpressionhelper.diy.com}ns0:strOutputProfileName&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Set Login" activityType="BEGIN" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L1'] //@flows[name='L10']" destFlows="//@flows[name='L3']">
+    <trigger numOfInputFlows="1" expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
+      <topLeftPoint x="134" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://healthprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/healthprogramhelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefixResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefixRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://healthprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefix]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/email&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://healthprogram.diy.com}ns0:getEmailPrefix/[1,S]{http://healthprogram.diy.com}ns0:strEmail&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>185&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://healthprogram.diy.com}ns0:getEmailPrefixResponse/[1,S]{http://healthprogram.diy.com}ns0:getEmailPrefixReturn&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Process Data/Variables/login&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/OutputMsgCopyRules>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <activities name="Execute Java Service" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L6']" destFlows="//@flows[name='L11']">
+    <trigger expectedEventName="" canRunMultipleTimes="true"/>
+    <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
+    <uiinfo imageScale="100" image="activity_autoint_48x32_proc.png">
+      <topLeftPoint x="605" y="156"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </uiinfo>
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Invoke Java&lt;/Name>&#xA;    &lt;RuntimeModuleName>BOFModuleRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>InvokeJavaActivityPanel&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg2Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>BOF_METHOD_NAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[AddUserToGroup]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>BOF_INTERFACE_NAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xCPJavaModule02]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg0Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg4Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg3Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>BOF_MODULE_NAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.javaservice:Artifacts/Java/xcpjavamodule02.javaservice]]>&lt;/Value>&#xA;            &lt;Type>ModuleName&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg1Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>25&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;corp&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg0(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>41&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;dmadmin&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg1(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>57&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;demo.demo&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg2(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>73&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/login&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg3(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;wp02_healthprogrammember&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg4(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+      <performer>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
+      </performer>
+      <methodFailure/>
+    </performerConfig>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='login']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_type']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='gender']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <eventConfigs label="Activity Completed">
+      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
+    </eventConfigs>
+  </activities>
+  <processData>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="first_name" label="first_name">
+        <type xsi:type="nsAttributeDatatypes:StringType"/>
+        <defaultValue exprStr="aaa"/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="last_name" label="last_name">
+        <type xsi:type="nsAttributeDatatypes:StringType"/>
+        <defaultValue exprStr="bbb"/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="email" label="email">
+        <type xsi:type="nsAttributeDatatypes:StringType"/>
+        <defaultValue exprStr="svinchon@gmail.com"/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="gender" label="gender">
+        <type xsi:type="nsAttributeDatatypes:StringType"/>
+        <defaultValue/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="age" label="age">
+        <type xsi:type="nsAttributeDatatypes:IntegerType"/>
+        <defaultValue/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="weight" label="weight">
+        <type xsi:type="nsAttributeDatatypes:FloatType"/>
+        <defaultValue/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="email_type" label="email_type">
+        <type xsi:type="nsAttributeDatatypes:StringType"/>
+        <defaultValue/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="email_count" label="email_count">
+        <type xsi:type="nsAttributeDatatypes:IntegerType"/>
+        <defaultValue/>
+      </attribute>
+    </variables>
+    <variables xsi:type="nsProcess:SimpleVariable">
+      <attribute name="login" label="login">
+        <type xsi:type="nsAttributeDatatypes:StringType"/>
+        <defaultValue/>
+      </attribute>
+    </variables>
+  </processData>
+  <flows name="L2" from="//@activities[name='Get%20Users%20With%20Same%20Email']" to="//@activities[name='Decision%20Split']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="246" y="144"/>
+        <points x="273" y="144"/>
+        <points x="273" y="144"/>
+        <points x="300" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L4" from="//@activities[name='Decision%20Split']" to="//@activities[name='Create%20Member']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="332" y="144"/>
+        <points x="359" y="144"/>
+        <points x="359" y="144"/>
+        <points x="386" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L5" from="//@activities[name='Create%20Member']" to="//@activities[name='Create%20DCTM%20User']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="434" y="144"/>
+        <points x="454" y="144"/>
+        <points x="454" y="144"/>
+        <points x="475" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L7" from="//@activities[name='Decision%20Split']" to="//@activities[name='Send%20ERROR%20Mail']">
+    <uiinfo srcActivityLocIndex="3" destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="316" y="160"/>
+        <points x="316" y="217"/>
+        <points x="679" y="217"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L9" from="//@activities[name='Send%20ERROR%20Mail']" to="//@activities[name='Join']">
+    <uiinfo destActivityLocIndex="3">
+      <line multiSegment="true">
+        <points x="727" y="217"/>
+        <points x="827" y="217"/>
+        <points x="827" y="160"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L8" from="//@activities[name='Send%20Welcome%20Mail']" to="//@activities[name='Join']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="731" y="144"/>
+        <points x="771" y="144"/>
+        <points x="771" y="144"/>
+        <points x="811" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L1" from="//@activities[name='Initiate']" to="//@activities[name='Set%20Login']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="66" y="144"/>
+        <points x="88" y="144"/>
+        <points x="88" y="144"/>
+        <points x="110" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L3" from="//@activities[name='Set%20Login']" to="//@activities[name='Get%20Users%20With%20Same%20Email']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="158" y="144"/>
+        <points x="178" y="144"/>
+        <points x="178" y="144"/>
+        <points x="178" y="144"/>
+        <points x="178" y="144"/>
+        <points x="198" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L10" from="//@activities[name='Start%20from%20Web%20Service']" to="//@activities[name='Set%20Login']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="66" y="214"/>
+        <points x="88" y="214"/>
+        <points x="88" y="144"/>
+        <points x="110" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L11" from="//@activities[name='Execute%20Java%20Service']" to="//@activities[name='Send%20Welcome%20Mail']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="629" y="144"/>
+        <points x="656" y="144"/>
+        <points x="656" y="144"/>
+        <points x="683" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <flows name="L6" from="//@activities[name='Create%20DCTM%20User']" to="//@activities[name='Execute%20Java%20Service']">
+    <uiinfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="523" y="144"/>
+        <points x="552" y="144"/>
+        <points x="552" y="144"/>
+        <points x="581" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
+  <defaultSettings/>
+  <processUIInfo>
+    <startActivityUIInfo imageScale="100" image="palette/event_start_32_proc.png">
+      <topLeftPoint x="50" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </startActivityUIInfo>
+    <endActivityUIInfo imageScale="100" image="palette/event_end_32_proc.png">
+      <topLeftPoint x="907" y="150"/>
+      <textStyle fontName="Dialog" fontSize="10">
+        <bgColor/>
+        <fgColor/>
+      </textStyle>
+    </endActivityUIInfo>
+    <endSequenceFlowUIInfo destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="843" y="144"/>
+        <points x="868" y="144"/>
+        <points x="868" y="144"/>
+        <points x="892" y="144"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </endSequenceFlowUIInfo>
+  </processUIInfo>
+  <eventConfigs label="Workflow Started">
+    <triggerType type="PROCESS_WORKFLOW_STARTED"/>
+  </eventConfigs>
+  <eventConfigs label="Workflow changed state">
+    <triggerType type="PROCESS_WORKFLOW_CHANGESTATE"/>
+  </eventConfigs>
+  <eventConfigs label="Workflow Aborted">
+    <triggerType type="PROCESS_WORKFLOW_ABORTED"/>
+  </eventConfigs>
+  <eventConfigs label="Workflow completed">
+    <triggerType type="PROCESS_WORKFLOW_COMPLETED"/>
+  </eventConfigs>
+</nsProcess:Process>

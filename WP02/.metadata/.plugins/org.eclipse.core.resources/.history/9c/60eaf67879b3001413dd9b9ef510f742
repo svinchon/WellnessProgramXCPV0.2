@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artifact:ArtifactIndexes xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Artifact="http://com.emc.xcp.builder/artifactmodel" urn="indexfile">
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.appparameter:Artifacts/Parameters/secondsbetweenupdat.parameter" categoryId="com.emc.xcp.artifact.appparameter" path="Artifacts/Parameters/secondsbetweenupdat.parameter" label="SecondsBetweenUpdates" name="secondsbetweenupdat"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.viewermapping:Artifacts/Viewer Formats/viewerformatmapping.viewerformat" categoryId="com.emc.xcp.artifact.viewermapping" path="Artifacts/Viewer Formats/viewerformatmapping.viewerformat" label="Viewers and Formats" name="viewerformatmapping"/>
+</Artifact:ArtifactIndexes>

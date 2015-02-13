@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artifact:ArtifactIndexes xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Artifact="http://com.emc.xcp.builder/artifactmodel" urn="indexfile">
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.appparameter:Artifacts/Parameters/secondsbetweenupdat.parameter" categoryId="com.emc.xcp.artifact.appparameter" path="Artifacts/Parameters/secondsbetweenupdat.parameter" label="SecondsBetweenUpdates" name="secondsbetweenupdat"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.viewermapping:Artifacts/Viewer Formats/viewerformatmapping.viewerformat" categoryId="com.emc.xcp.artifact.viewermapping" path="Artifacts/Viewer Formats/viewerformatmapping.viewerformat" label="Viewers and Formats" name="viewerformatmapping"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/view_base_folder.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/view_base_folder.page" label="View Base Folder" name="view_base_folder"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/memberdata.businessobj" categoryId="com.emc.xcp.artifact.bo" path="Artifacts/Business Objects/memberdata.businessobj" label="MemberData" name="memberdata"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.contextmenu:Artifacts/Context Menus/dm_document.contextmenu" categoryId="com.emc.xcp.artifact.contextmenu" path="Artifacts/Context Menus/dm_document.contextmenu" label="Context Menu" name="dm_document"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.approle:Artifacts/Roles/healthprogrammanage.role" categoryId="com.emc.xcp.artifact.approle" path="Artifacts/Roles/healthprogrammanage.role" label="HealthProgramManager" name="healthprogrammanage"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/results.businessobj" categoryId="com.emc.xcp.artifact.bo" path="Artifacts/Business Objects/results.businessobj" label="Results" name="results"/>
+</Artifact:ArtifactIndexes>

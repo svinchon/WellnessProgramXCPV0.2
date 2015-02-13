@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsJavaService:JavaService xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nsJavaService="http://xcp.emc.com/javaservice" urn="urn:wp02:com.emc.xcp.artifact.javaservice:Artifacts/Java/xcpjavamodule02.javaservice" categoryId="com.emc.xcp.artifact.javaservice" name="xCPJavaModule02" label="xCPJavaModule02" primaryClassName="xCPJavaModule02" description=""/>

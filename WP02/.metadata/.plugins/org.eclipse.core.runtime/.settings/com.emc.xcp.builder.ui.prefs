@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+xCP_CONFIGURATION1=DEPLOYMETHOD INCREMENTAL DEPLOYPOLICY MINIMAL ISDEFAULT true com.emc.executionenvironment.xcp.xPlore.xploreAsyncIndexing true CONFIGFILENAME rc-54948280_config.xml ENVID 1303528787 CONFIGNAME RC
+xCP_CONFIGURATION_CNT=1
