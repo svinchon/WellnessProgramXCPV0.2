@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ApplicationConfiguration application-name="WP02" namespace="wp02" version="1.0.0" description="">
+    <configuration type="WebserviceEndpoint" name="xpressionquickdoc" namespace="wp02" id="com.emc.xcp.artifact.endpoint">
+        <property name="description"></property>
+        <property name="wsdlURL">http://xpression45.iigfrance.com/xFramework/services/QuickDoc?wsdl</property>
+        <property name="username">xDesigner</property>
+        <property name="password">DM_ENCR_TEXT_V2=AAAAENl5XJfwhuuEzceii/LuQDSRxT4JdKs+kwvZqTfuVG87wj6pPtZuXHOFCsbGk2tnlVGnCCcYOHIdPfNo5WkknO0=</property>
+    </configuration>
+    <configuration type="WebserviceEndpoint" name="xmlhelper" namespace="wp02" id="com.emc.xcp.artifact.endpoint">
+        <property name="description"></property>
+        <property name="wsdlURL">http://nkxcp21:8080/XMLHelper/services/XMLHelper?wsdl</property>
+        <property name="username"></property>
+        <property name="password"></property>
+    </configuration>
+    <configuration type="XPressionEndpoint" name="xpression" namespace="wp02" id="com.emc.xcp.artifact.endpoint">
+        <property name="description"></property>
+        <property name="serverURL">http://xpression45.iigfrance.com/</property>
+        <property name="username">xDesigner</property>
+        <property name="password">DM_ENCR_TEXT_V2=AAAAEGR/d7yBras/9yIisNY5a7KqOARGnEubzZ35ZXme0CGHtey3ZhbxCZYg/1Je4iTKqM6QvTXR6s4+S72RxZpMWmM=</property>
+    </configuration>
+    <configuration type="WebserviceEndpoint" name="wphelper" namespace="wp02" id="com.emc.xcp.artifact.endpoint">
+        <property name="description"></property>
+        <property name="wsdlURL">http://nkxcp21:8080/WellnessProgramHelper/services/WellnessProgramHelper?wsdl</property>
+        <property name="username"></property>
+        <property name="password"></property>
+    </configuration>
+    <configuration type="RepositoryEndpoint" name="dctm" namespace="wp02" id="com.emc.xcp.artifact.endpoint">
+        <property name="description"></property>
+        <property name="docbrokerHostName">nkxcp21</property>
+        <property name="docbrokerPort">1489</property>
+        <property name="repositoryName">corp</property>
+        <property name="username">dmadmin</property>
+        <property name="password">DM_ENCR_TEXT_V2=AAAAEH98RbrTGzP2qwybLJ/rXbAhrvGbbTkD/NL5w1CUC8jvUkXd7ADI8NQOQpof/p7HZXuAoNhvXl9bcMmrwKPhpT0=</property>
+        <property name="domain"></property>
+    </configuration>
+    <configuration type="WebserviceEndpoint" name="xpressionhelper" namespace="wp02" id="com.emc.xcp.artifact.endpoint">
+        <property name="description"></property>
+        <property name="wsdlURL">http://nkxcp21:8080/xPressionHelper/services/xPressionHelper?wsdl</property>
+        <property name="username"></property>
+        <property name="password"></property>
+    </configuration>
+</ApplicationConfiguration>

@@ -6,7 +6,8 @@
   <indexes urn="urn:wp02:com.emc.xcp.artifact.approle:Artifacts/Roles/member.role" categoryId="com.emc.xcp.artifact.approle" path="Artifacts/Roles/member.role" label="Member" name="member"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/view_base_folder.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/view_base_folder.page" label="View Base Folder" name="view_base_folder"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.contextmenu:Artifacts/Context Menus/dm_document.contextmenu" categoryId="com.emc.xcp.artifact.contextmenu" path="Artifacts/Context Menus/dm_document.contextmenu" label="Context Menu" name="dm_document"/>
-  <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper_ws.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/xpressionhelper_ws.endpoint" label="xPressionHelper_WS" name="xpressionhelper_ws"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.javaservice:Artifacts/Java/xcpjavamodule02.javaservice" categoryId="com.emc.xcp.artifact.javaservice" path="Artifacts/Java/xcpjavamodule02.javaservice" label="xCPJavaModule02" name="xcpjavamodule02"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/xpressionhelper.endpoint" label="xPressionHelper" name="xpressionhelper"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xmlhelper.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/xmlhelper.endpoint" label="XMLHelper" name="xmlhelper"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/view_base_content.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/view_base_content.page" label="View Base Content" name="view_base_content"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/page_not_found.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/page_not_found.page" label="System 404 Page" name="page_not_found"/>
@@ -27,7 +28,5 @@
   <indexes urn="urn:wp02:com.emc.xcp.artifact.approle:Artifacts/Roles/manager.role" categoryId="com.emc.xcp.artifact.approle" path="Artifacts/Roles/manager.role" label="Manager" name="manager"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/application_parameter.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/application_parameter.page" label="Manage Application Parameters" name="application_parameter"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/edit_base_folder.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/edit_base_folder.page" label="Edit Base Folder" name="edit_base_folder"/>
-  <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/dfchelper.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/dfchelper.endpoint" label="DFCHelper" name="dfchelper"/>
-  <indexes urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/weeklyreport.process" categoryId="com.emc.ide.artifact.process" path="Artifacts/Processes/weeklyreport.process" label="WeeklyReport" name="weeklyreport"/>
-  <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper_ini.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/xpressionhelper_ini.endpoint" label="xPressionHelper_InitiateXBatchjob" name="xpressionhelper_ini"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.java.classfile:xCPJavaModule02.class" categoryId="com.emc.xcp.artifact.java.classfile" path="xCPJavaModule02.class" label="xCPJavaModule02" name="xCPJavaModule02"/>
 </Artifact:ArtifactIndexes>

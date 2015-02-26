@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsProcess:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsActivity="http://documentum.com/bpm/activity" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsCommon="http://documentum.com/common" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsProcess="http://documentum.com/bpm/process" urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/registrationrequest.process" categoryId="com.emc.ide.artifact.process" name="registrationrequest" label="RegistrationRequest" description="" webServiceTargetNamespace="WellnessProgram" workflowInstructions="">
+<nsProcess:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsActivity="http://documentum.com/bpm/activity" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsCommon="http://documentum.com/common" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsProcess="http://documentum.com/bpm/process" urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/registrationrequest.process" categoryId="com.emc.ide.artifact.process" name="registrationrequest" label="RegistrationRequest" description="" webServiceTargetNamespace="HealthProgram" workflowInstructions="">
   <activities name="Start from Web Service" activityType="INITIATE" description="" priority="Medium" taskName="" taskInstructions="" destFlows="//@flows[name='L10']">
     <trigger expectedEventName="" canRunMultipleTimes="true"/>
     <transition xsi:type="nsActivity:AllFlowsTransition"/>
@@ -12,7 +12,7 @@
         <fgColor/>
       </textStyle>
     </uiinfo>
-    <performerConfig xsi:type="nsActivity:InboundInitiatePerformerConfiguration" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>WS Inbound - Initiate&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceInboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceInboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MODEL_TYPE&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[PROCESS_FIRST_MODEL]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WSDL_URL&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>TARGET_NAMESPACE_URI&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgram]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORT_TYPE&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WP02]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAME&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[SubmitRegistration]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>SOAP_ACTION&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CONFIG_COMPARATOR_PARAMETER_NAMES&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[TARGET_NAMESPACE_URI,PORT_TYPE,OPERATION_NAME]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OUTPUT_MESSAGE_NAME&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OUTPUT_MESSAGE_NAMESPACE_URI&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WSDL_FILE_OBJECT_ID&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CONTENT_BASED_CORRELATION&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CORRELATION_SET_NAME_FROM_CONFIG_PANEL&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WS_SECURITY_BASIC_AUTHENTICATION&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_USERNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_PASSWORD_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MTOM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_IS_PASSWORD_DIGEST&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[true]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules/>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;"/>
+    <performerConfig xsi:type="nsActivity:InboundInitiatePerformerConfiguration" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>WS Inbound - Initiate&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceInboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceInboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MODEL_TYPE&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[PROCESS_FIRST_MODEL]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WSDL_URL&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>TARGET_NAMESPACE_URI&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgram]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORT_TYPE&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WP01]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAME&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[SubmitRegistration]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>SOAP_ACTION&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CONFIG_COMPARATOR_PARAMETER_NAMES&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[TARGET_NAMESPACE_URI,PORT_TYPE,OPERATION_NAME]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OUTPUT_MESSAGE_NAME&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OUTPUT_MESSAGE_NAMESPACE_URI&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WSDL_FILE_OBJECT_ID&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CONTENT_BASED_CORRELATION&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>CORRELATION_SET_NAME_FROM_CONFIG_PANEL&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>WS_SECURITY_BASIC_AUTHENTICATION&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_USERNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_PASSWORD_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value xsi:nil=&quot;true&quot;>&lt;![CDATA[]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>MTOM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>AUTHENTICATION_IS_PASSWORD_DIGEST&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[true]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules/>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;"/>
     <variableCharacteristics key="//@processData/@variables[name='birth_date']">
       <value visible="true"/>
     </variableCharacteristics>
@@ -323,13 +323,19 @@
       </performer>
       <methodFailure/>
     </performerConfig>
-    <variableCharacteristics key="//@processData/@variables[name='first_name']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='age']">
+    <variableCharacteristics key="//@processData/@variables[name='birth_date']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='username']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='badge_number']">
@@ -338,31 +344,25 @@
     <variableCharacteristics key="//@processData/@variables[name='login']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email_count']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='password']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='birth_date']">
-      <value visible="true"/>
-    </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='email_type']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='last_name']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='gender']">
       <value visible="true"/>
     </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='password']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='age']">
+      <value visible="true"/>
+    </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='vitex_id']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='weight']">
+    <variableCharacteristics key="//@processData/@variables[name='last_name']">
       <value visible="true"/>
     </variableCharacteristics>
     <eventConfigs label="Activity Completed">
@@ -497,13 +497,13 @@
       <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
     </eventConfigs>
   </activities>
-  <activities name="Send ERROR Mail" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L12']" destFlows="//@flows[name='L9']">
+  <activities name="Send ERROR Mail" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L7']" destFlows="//@flows[name='L9']">
     <trigger expectedEventName="" canRunMultipleTimes="true"/>
     <transition xsi:type="nsActivity:AllFlowsTransition"/>
     <timers/>
     <calendar flag="Performer"/>
     <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
-      <topLeftPoint x="703" y="222"/>
+      <topLeftPoint x="703" y="223"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
@@ -567,7 +567,7 @@
     <timers/>
     <calendar flag="Performer"/>
     <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
-      <topLeftPoint x="760" y="156"/>
+      <topLeftPoint x="707" y="156"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
@@ -631,13 +631,13 @@
     <timers/>
     <calendar flag="Performer"/>
     <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
-      <topLeftPoint x="132" y="150"/>
+      <topLeftPoint x="134" y="150"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
       </textStyle>
     </uiinfo>
-    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://wellnessprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/wphelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefixResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefixRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://wellnessprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefix]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/email&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://wellnessprogram.diy.com}ns0:getEmailPrefix/[1,S]{http://wellnessprogram.diy.com}ns0:strEmail&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>185&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://wellnessprogram.diy.com}ns0:getEmailPrefixResponse/[1,S]{http://wellnessprogram.diy.com}ns0:getEmailPrefixReturn&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Process Data/Variables/login&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/OutputMsgCopyRules>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://healthprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/healthprogramhelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefixResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefixRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://healthprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[getEmailPrefix]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[HealthProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/email&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://healthprogram.diy.com}ns0:getEmailPrefix/[1,S]{http://healthprogram.diy.com}ns0:strEmail&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>185&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://healthprogram.diy.com}ns0:getEmailPrefixResponse/[1,S]{http://healthprogram.diy.com}ns0:getEmailPrefixReturn&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Process Data/Variables/login&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/OutputMsgCopyRules>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
       <performer>
         <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
       </performer>
@@ -689,31 +689,37 @@
       <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
     </eventConfigs>
   </activities>
-  <activities name="Call Web Service" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L7']" destFlows="//@flows[name='L12']">
+  <activities name="Execute Java Service" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L6']" destFlows="//@flows[name='L11']">
     <trigger expectedEventName="" canRunMultipleTimes="true"/>
     <transition xsi:type="nsActivity:AllFlowsTransition"/>
     <timers/>
     <calendar flag="Performer"/>
-    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
-      <topLeftPoint x="474" y="228"/>
+    <uiinfo imageScale="100" image="activity_autoint_48x32_proc.png">
+      <topLeftPoint x="605" y="156"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
       </textStyle>
     </uiinfo>
-    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://wellnessprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/wphelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[writeToLogResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[writeToLogRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://wellnessprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[writeToLog]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;&quot;User Exists!&quot;&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://wellnessprogram.diy.com}ns0:writeToLog/[1,S]{http://wellnessprogram.diy.com}ns0:str&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Invoke Java&lt;/Name>&#xA;    &lt;RuntimeModuleName>BOFModuleRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>InvokeJavaActivityPanel&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg2Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>BOF_METHOD_NAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[AddUserToGroup]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>BOF_INTERFACE_NAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xCPJavaModule02]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg0Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg4Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg3Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>BOF_MODULE_NAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.javaservice:Artifacts/Java/xcpjavamodule02.javaservice]]>&lt;/Value>&#xA;            &lt;Type>ModuleName&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>arg1Type&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[java.lang.String]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>25&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;corp&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg0(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>41&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;dmadmin&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg1(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>57&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;demo.demo&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg2(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>73&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/login&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg3(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;wp02_healthprogrammember&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/Arguments/arg4(2)&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
       <performer>
         <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
       </performer>
       <methodFailure/>
     </performerConfig>
-    <variableCharacteristics key="//@processData/@variables[name='first_name']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='age']">
+    <variableCharacteristics key="//@processData/@variables[name='birth_date']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='username']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='weight']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='email']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='badge_number']">
@@ -722,159 +728,25 @@
     <variableCharacteristics key="//@processData/@variables[name='login']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email_count']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='password']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='birth_date']">
-      <value visible="true"/>
-    </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='email_type']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='last_name']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='gender']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='vitex_id']">
+    <variableCharacteristics key="//@processData/@variables[name='password']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='weight']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <eventConfigs label="Activity Completed">
-      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
-    </eventConfigs>
-  </activities>
-  <activities name="Call Web Service-1" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L13']" destFlows="//@flows[name='L11']">
-    <trigger expectedEventName="" canRunMultipleTimes="true"/>
-    <transition xsi:type="nsActivity:AllFlowsTransition"/>
-    <timers/>
-    <calendar flag="Performer"/>
-    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
-      <topLeftPoint x="682" y="67"/>
-      <textStyle fontName="Dialog" fontSize="10">
-        <bgColor/>
-        <fgColor/>
-      </textStyle>
-    </uiinfo>
-    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://wellnessprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/wphelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[writeToLogResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[writeToLogRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://wellnessprogram.diy.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[writeToLog]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[WellnessProgramHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;User Does Not Exist&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://wellnessprogram.diy.com}ns0:writeToLog/[1,S]{http://wellnessprogram.diy.com}ns0:str&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
-      <performer>
-        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
-      </performer>
-      <methodFailure/>
-    </performerConfig>
-    <variableCharacteristics key="//@processData/@variables[name='first_name']">
+    <variableCharacteristics key="//@processData/@variables[name='email_count']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='age']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='username']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='badge_number']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='login']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email_count']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='password']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='birth_date']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email_type']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='last_name']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='gender']">
-      <value visible="true"/>
-    </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='vitex_id']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='weight']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <eventConfigs label="Activity Completed">
-      <triggerType type="PROCESS_ACTIVITY_COMPLETED"/>
-    </eventConfigs>
-  </activities>
-  <activities name="Call Web Service-2" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L6']" destFlows="//@flows[name='L13']">
-    <trigger expectedEventName="" canRunMultipleTimes="true"/>
-    <transition xsi:type="nsActivity:AllFlowsTransition"/>
-    <timers/>
-    <calendar flag="Performer"/>
-    <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
-      <topLeftPoint x="570" y="67"/>
-      <textStyle fontName="Dialog" fontSize="10">
-        <bgColor/>
-        <fgColor/>
-      </textStyle>
-    </uiinfo>
-    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>Dynamic Web Services&lt;/Name>&#xA;    &lt;RuntimeModuleName>WebServiceRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>WebServiceDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://dfchelper.diy.xcp.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/dfchelper.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_OUTPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[AddUserToGroupResponse]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[DFCHelper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_INPUTMESSAGENAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[AddUserToGroupRequest]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_NAMESPACEURI_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[http://dfchelper.diy.xcp.com]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>OPERATION_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[AddUserToGroup]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>PORTTYPE_LOCALNAME_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[dfcHelperWrapper]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>USE_XOP_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[false]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>89&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;dmadmin&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://dfchelper.diy.xcp.com}ns0:AddUserToGroup/[1,S]{http://dfchelper.diy.xcp.com}ns0:strAdminUser&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>169&lt;/XPosition>&#xA;                &lt;YPosition>105&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;demo.demo&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://dfchelper.diy.xcp.com}ns0:AddUserToGroup/[1,S]{http://dfchelper.diy.xcp.com}ns0:strAdminPassword&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>121&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;corp&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://dfchelper.diy.xcp.com}ns0:AddUserToGroup/[1,S]{http://dfchelper.diy.xcp.com}ns0:strRepository&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>137&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>/Process Data/Variables/login&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://dfchelper.diy.xcp.com}ns0:AddUserToGroup/[1,S]{http://dfchelper.diy.xcp.com}ns0:strUser&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;        &lt;MappingRule>&#xA;            &lt;FunctionName>Copy&lt;/FunctionName>&#xA;            &lt;Location>&#xA;                &lt;XPosition>175&lt;/XPosition>&#xA;                &lt;YPosition>153&lt;/YPosition>&#xA;            &lt;/Location>&#xA;            &lt;From>&#xA;                &lt;Value>&quot;wp02_member&quot;&lt;/Value>&#xA;            &lt;/From>&#xA;            &lt;To>/SOAPEnvelope/SOAPBody/parameters/[-1,S]{http://dfchelper.diy.xcp.com}ns0:AddUserToGroup/[1,S]{http://dfchelper.diy.xcp.com}ns0:strGroup&lt;/To>&#xA;            &lt;RuleType>RULE_TYPE_FOR_ALL&lt;/RuleType>&#xA;            &lt;TargetWriteOption>TARGET_WRITE_OVERWRITE&lt;/TargetWriteOption>&#xA;        &lt;/MappingRule>&#xA;    &lt;/InputMsgCopyRules>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
-      <performer>
-        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
-      </performer>
-      <methodFailure/>
-    </performerConfig>
-    <variableCharacteristics key="//@processData/@variables[name='gender']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='badge_number']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='weight']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email_count']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='password']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='first_name']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='birth_date']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='username']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='login']">
-      <value visible="true"/>
-    </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='last_name']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='age']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='email_type']">
-      <value visible="true"/>
-    </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='vitex_id']">
       <value visible="true"/>
     </variableCharacteristics>
     <eventConfigs label="Activity Completed">
@@ -963,7 +835,7 @@
     <variables xsi:type="nsProcess:SimpleVariable">
       <attribute name="birth_date" label="birth_date">
         <type xsi:type="nsAttributeDatatypes:StringType"/>
-        <defaultValue/>
+        <defaultValue exprStr=""/>
       </attribute>
     </variables>
   </processData>
@@ -1000,11 +872,21 @@
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </uiinfo>
   </flows>
+  <flows name="L7" from="//@activities[name='Decision%20Split']" to="//@activities[name='Send%20ERROR%20Mail']">
+    <uiinfo srcActivityLocIndex="3" destActivityLocIndex="1">
+      <line multiSegment="true">
+        <points x="316" y="160"/>
+        <points x="316" y="217"/>
+        <points x="679" y="217"/>
+      </line>
+      <labelStyle fontName="Helvetica" fontSize="10"/>
+    </uiinfo>
+  </flows>
   <flows name="L9" from="//@activities[name='Send%20ERROR%20Mail']" to="//@activities[name='Join']">
     <uiinfo destActivityLocIndex="3">
       <line multiSegment="true">
-        <points x="727" y="216"/>
-        <points x="827" y="216"/>
+        <points x="727" y="217"/>
+        <points x="827" y="217"/>
         <points x="827" y="160"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
@@ -1013,11 +895,9 @@
   <flows name="L8" from="//@activities[name='Send%20Welcome%20Mail']" to="//@activities[name='Join']">
     <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
-        <points x="784" y="144"/>
-        <points x="804" y="144"/>
-        <points x="804" y="144"/>
-        <points x="791" y="144"/>
-        <points x="791" y="144"/>
+        <points x="731" y="144"/>
+        <points x="771" y="144"/>
+        <points x="771" y="144"/>
         <points x="811" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
@@ -1027,9 +907,9 @@
     <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
         <points x="66" y="144"/>
-        <points x="87" y="144"/>
-        <points x="87" y="144"/>
-        <points x="108" y="144"/>
+        <points x="88" y="144"/>
+        <points x="88" y="144"/>
+        <points x="110" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </uiinfo>
@@ -1037,9 +917,11 @@
   <flows name="L3" from="//@activities[name='Set%20Login']" to="//@activities[name='Get%20Users%20With%20Same%20Email']">
     <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
-        <points x="156" y="144"/>
-        <points x="177" y="144"/>
-        <points x="177" y="144"/>
+        <points x="158" y="144"/>
+        <points x="178" y="144"/>
+        <points x="178" y="144"/>
+        <points x="178" y="144"/>
+        <points x="178" y="144"/>
         <points x="198" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
@@ -1049,67 +931,31 @@
     <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
         <points x="66" y="214"/>
-        <points x="87" y="214"/>
-        <points x="87" y="144"/>
-        <points x="108" y="144"/>
+        <points x="88" y="214"/>
+        <points x="88" y="144"/>
+        <points x="110" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </uiinfo>
   </flows>
-  <flows name="L7" from="//@activities[name='Decision%20Split']" to="//@activities[name='Call%20Web%20Service']">
-    <uiinfo srcActivityLocIndex="3" destActivityLocIndex="1">
-      <line multiSegment="true">
-        <points x="316" y="160"/>
-        <points x="316" y="216"/>
-        <points x="450" y="216"/>
-      </line>
-      <labelStyle fontName="Helvetica" fontSize="10"/>
-    </uiinfo>
-  </flows>
-  <flows name="L12" from="//@activities[name='Call%20Web%20Service']" to="//@activities[name='Send%20ERROR%20Mail']">
+  <flows name="L11" from="//@activities[name='Execute%20Java%20Service']" to="//@activities[name='Send%20Welcome%20Mail']">
     <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
-        <points x="498" y="216"/>
-        <points x="588" y="216"/>
-        <points x="588" y="216"/>
-        <points x="679" y="216"/>
+        <points x="629" y="144"/>
+        <points x="656" y="144"/>
+        <points x="656" y="144"/>
+        <points x="683" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </uiinfo>
   </flows>
-  <flows name="L11" from="//@activities[name='Call%20Web%20Service-1']" to="//@activities[name='Send%20Welcome%20Mail']">
-    <uiinfo destActivityLocIndex="1">
-      <line multiSegment="true">
-        <points x="706" y="55"/>
-        <points x="726" y="55"/>
-        <points x="726" y="99"/>
-        <points x="716" y="99"/>
-        <points x="716" y="144"/>
-        <points x="736" y="144"/>
-      </line>
-      <labelStyle fontName="Helvetica" fontSize="10"/>
-    </uiinfo>
-  </flows>
-  <flows name="L6" from="//@activities[name='Create%20DCTM%20User']" to="//@activities[name='Call%20Web%20Service-2']">
+  <flows name="L6" from="//@activities[name='Create%20DCTM%20User']" to="//@activities[name='Execute%20Java%20Service']">
     <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
         <points x="523" y="144"/>
-        <points x="543" y="144"/>
-        <points x="543" y="99"/>
-        <points x="526" y="99"/>
-        <points x="526" y="55"/>
-        <points x="546" y="55"/>
-      </line>
-      <labelStyle fontName="Helvetica" fontSize="10"/>
-    </uiinfo>
-  </flows>
-  <flows name="L13" from="//@activities[name='Call%20Web%20Service-2']" to="//@activities[name='Call%20Web%20Service-1']">
-    <uiinfo destActivityLocIndex="1">
-      <line multiSegment="true">
-        <points x="594" y="55"/>
-        <points x="626" y="55"/>
-        <points x="626" y="55"/>
-        <points x="658" y="55"/>
+        <points x="552" y="144"/>
+        <points x="552" y="144"/>
+        <points x="581" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </uiinfo>
@@ -1124,7 +970,7 @@
       </textStyle>
     </startActivityUIInfo>
     <endActivityUIInfo imageScale="100" image="palette/event_end_32_proc.png">
-      <topLeftPoint x="901" y="150"/>
+      <topLeftPoint x="906" y="150"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
@@ -1133,9 +979,9 @@
     <endSequenceFlowUIInfo destActivityLocIndex="1">
       <line multiSegment="true">
         <points x="843" y="144"/>
-        <points x="865" y="144"/>
-        <points x="865" y="144"/>
-        <points x="886" y="144"/>
+        <points x="867" y="144"/>
+        <points x="867" y="144"/>
+        <points x="891" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </endSequenceFlowUIInfo>

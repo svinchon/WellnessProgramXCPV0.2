@@ -1,0 +1,71 @@
+{
+  "name" : "business-object-type",
+  "type" : "wp02_member",
+  "label" : "Member",
+  "parent" : "${contextPath}types/business-objects/xcp_rootbo",
+  "properties" : [ {
+    "name" : "first_name",
+    "label" : "First Name",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "last_name",
+    "label" : "Last Name",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "gender",
+    "label" : "Gender",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "email",
+    "label" : "Email",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "age",
+    "label" : "Age",
+    "type" : "integer"
+  }, {
+    "name" : "weight",
+    "label" : "Weight",
+    "type" : "float"
+  }, {
+    "name" : "member_id",
+    "label" : "Id",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "login",
+    "label" : "Login",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "last_data_update",
+    "label" : "Last Data Update",
+    "type" : "datetime"
+  }, {
+    "name" : "last_data_scan",
+    "label" : "Last Data Scan",
+    "type" : "datetime"
+  } ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "${contextPath}types/business-objects/wp02_member"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/instances",
+    "href" : "${contextPath}business-objects/wp02_member"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/defaults",
+    "href" : "${contextPath}types/business-objects/wp02_member/defaults"
+  }, {
+    "rel" : "type"
+  }, {
+    "rel" : "edit"
+  }, {
+    "rel" : "canonical"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/delete"
+  } ]
+}

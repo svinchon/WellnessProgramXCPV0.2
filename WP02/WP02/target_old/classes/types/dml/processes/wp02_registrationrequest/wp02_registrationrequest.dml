@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<process-type label="RegistrationRequest" runnable-stateless="false" type="wp02_registrationrequest" xmlns="http://identifiers.emc.com/vocab/xcp">
+  <urn>urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/registrationrequest.process</urn>
+  <properties>
+    <property label="process_id" length="64" name="process_id" type="string"/>
+    <property label="status" length="64" name="status" type="string"/>
+    <property label="id" length="64" name="id" type="string"/>
+    <property label="r_runtime_state" name="r_runtime_state" type="integer"/>
+    <property label="correlation_identifier" length="64" name="correlation_identifier" type="string"/>
+    <property label="object_name" length="64" name="object_name" type="string"/>
+    <property label="r_creator_name" length="64" name="r_creator_name" type="string"/>
+    <property label="r_start_date" name="r_start_date" type="datetime"/>
+    <property label="supervisor_name" length="64" name="supervisor_name" type="string"/>
+    <property label="supervisor_address" length="64" name="supervisor_address" type="string"/>
+  </properties>
+  <tasks>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_start_from_web_serv" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_member" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_initiate" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_get_users_with_same" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_dctm_user" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_join" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_error_mail" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_welcome_mail" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login" rel="http://identifiers.emc.com/linkrel/task"/>
+    <task href="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_execute_java_servic" rel="http://identifiers.emc.com/linkrel/task"/>
+  </tasks>
+  <flows>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_get_users_with_same" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_member"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_member" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_dctm_user"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_error_mail"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_error_mail" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_join"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_welcome_mail" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_join"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_initiate" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_get_users_with_same"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_start_from_web_serv" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_execute_java_servic" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_welcome_mail"/>
+    <flow flow-type="regular" source="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_dctm_user" target="${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_execute_java_servic"/>
+  </flows>
+  <data>
+    <variables>
+      <variable default-value="aaa" label="first_name" mandatory="false" name="first_name" repeating="false" type="string"/>
+      <variable default-value="bbb" label="last_name" mandatory="false" name="last_name" repeating="false" type="string"/>
+      <variable default-value="svinchon@gmail.com" label="email" mandatory="false" name="email" repeating="false" type="string"/>
+      <variable default-value="" label="gender" mandatory="false" name="gender" repeating="false" type="string"/>
+      <variable default-value="" label="age" mandatory="false" name="age" repeating="false" type="integer"/>
+      <variable default-value="" label="weight" mandatory="false" name="weight" repeating="false" type="float"/>
+      <variable default-value="" label="email_type" mandatory="false" name="email_type" repeating="false" type="string"/>
+      <variable default-value="" label="email_count" mandatory="false" name="email_count" repeating="false" type="integer"/>
+      <variable default-value="" label="login" mandatory="false" name="login" repeating="false" type="string"/>
+      <variable default-value="" label="vitex_id" mandatory="false" name="vitex_id" repeating="false" type="string"/>
+      <variable default-value="" label="badge_number" mandatory="false" name="badge_number" repeating="false" type="string"/>
+      <variable default-value="" label="username" mandatory="false" name="username" repeating="false" type="string"/>
+      <variable default-value="" label="password" mandatory="false" name="password" repeating="false" type="string"/>
+      <variable default-value="" label="birth_date" mandatory="false" name="birth_date" repeating="false" type="string"/>
+    </variables>
+  </data>
+  <links>
+    <link href="${contextPath}types/processes/wp02_registrationrequest" rel="self"/>
+    <link href="${contextPath}processes/wp02_registrationrequest" rel="http://identifiers.emc.com/linkrel/instances"/>
+    <link rel="http://identifiers.emc.com/linkrel/halt"/>
+    <link rel="http://identifiers.emc.com/linkrel/resume"/>
+    <link rel="http://identifiers.emc.com/linkrel/terminate"/>
+    <link rel="http://identifiers.emc.com/linkrel/tasks"/>
+    <link rel="http://identifiers.emc.com/linkrel/attachments"/>
+  </links>
+</process-type>

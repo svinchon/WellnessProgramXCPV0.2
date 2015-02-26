@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<business-object-type label="Member" parent="${contextPath}types/business-objects/xcp_rootbo" type="wp02_member" xmlns="http://identifiers.emc.com/vocab/xcp">
+  <properties>
+    <property label="First Name" length="64" name="first_name" type="string"/>
+    <property label="Last Name" length="64" name="last_name" type="string"/>
+    <property label="Gender" length="64" name="gender" type="string"/>
+    <property label="Email" length="64" name="email" type="string"/>
+    <property label="Age" name="age" type="integer"/>
+    <property label="Weight" name="weight" type="float"/>
+    <property label="Id" length="64" name="member_id" type="string"/>
+    <property label="Login" length="64" name="login" type="string"/>
+    <property label="Last Data Update" name="last_data_update" type="datetime"/>
+    <property label="Last Data Scan" name="last_data_scan" type="datetime"/>
+  </properties>
+  <links>
+    <link href="${contextPath}types/business-objects/wp02_member" rel="self"/>
+    <link href="${contextPath}business-objects/wp02_member" rel="http://identifiers.emc.com/linkrel/instances"/>
+    <link href="${contextPath}types/business-objects/wp02_member/defaults" rel="http://identifiers.emc.com/linkrel/defaults"/>
+    <link rel="type"/>
+    <link rel="edit"/>
+    <link rel="canonical"/>
+    <link rel="http://identifiers.emc.com/linkrel/delete"/>
+  </links>
+</business-object-type>

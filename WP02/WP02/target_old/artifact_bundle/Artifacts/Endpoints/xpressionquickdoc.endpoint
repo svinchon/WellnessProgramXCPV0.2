@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsEndpoint:WebserviceEndpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nsEndpoint="http://xcp.emc.com/endpoint" urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionquickdoc.endpoint" categoryId="com.emc.xcp.artifact.endpoint" name="xpressionquickdoc" label="xPressionQuickDoc" wsdlURL="http://xpression45.iigfrance.com/xFramework/services/QuickDoc?wsdl" username="xDesigner" password="DM_ENCR_TEXT_V2=AAAAENl5XJfwhuuEzceii/LuQDSRxT4JdKs+kwvZqTfuVG87wj6pPtZuXHOFCsbGk2tnlVGnCCcYOHIdPfNo5WkknO0="/>

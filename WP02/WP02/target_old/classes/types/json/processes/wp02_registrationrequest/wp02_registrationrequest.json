@@ -1,0 +1,253 @@
+{
+  "name" : "process-type",
+  "type" : "wp02_registrationrequest",
+  "label" : "RegistrationRequest",
+  "runnable-stateless" : false,
+  "urn" : "urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/registrationrequest.process",
+  "properties" : [ {
+    "name" : "process_id",
+    "label" : "process_id",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "status",
+    "label" : "status",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "id",
+    "label" : "id",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "r_runtime_state",
+    "label" : "r_runtime_state",
+    "type" : "integer"
+  }, {
+    "name" : "correlation_identifier",
+    "label" : "correlation_identifier",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "object_name",
+    "label" : "object_name",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "r_creator_name",
+    "label" : "r_creator_name",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "r_start_date",
+    "label" : "r_start_date",
+    "type" : "datetime"
+  }, {
+    "name" : "supervisor_name",
+    "label" : "supervisor_name",
+    "type" : "string",
+    "length" : 64
+  }, {
+    "name" : "supervisor_address",
+    "label" : "supervisor_address",
+    "type" : "string",
+    "length" : 64
+  } ],
+  "tasks" : [ {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_start_from_web_serv"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_member"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_initiate"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_get_users_with_same"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_dctm_user"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_join"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_error_mail"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_welcome_mail"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/task",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_execute_java_servic"
+  } ],
+  "flows" : [ {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_get_users_with_same",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_member",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_member",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_dctm_user",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_decision_split",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_error_mail",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_error_mail",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_join",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_welcome_mail",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_join",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_initiate",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_get_users_with_same",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_start_from_web_serv",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_set_login",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_execute_java_servic",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_send_welcome_mail",
+    "flow-type" : "regular"
+  }, {
+    "source" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_create_dctm_user",
+    "target" : "${contextPath}types/processes/wp02_registrationrequest/tasks/wp02_execute_java_servic",
+    "flow-type" : "regular"
+  } ],
+  "data" : {
+    "variables" : [ {
+      "name" : "first_name",
+      "label" : "first_name",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : "aaa",
+      "mandatory" : false
+    }, {
+      "name" : "last_name",
+      "label" : "last_name",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : "bbb",
+      "mandatory" : false
+    }, {
+      "name" : "email",
+      "label" : "email",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : "svinchon@gmail.com",
+      "mandatory" : false
+    }, {
+      "name" : "gender",
+      "label" : "gender",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "age",
+      "label" : "age",
+      "type" : "integer",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "weight",
+      "label" : "weight",
+      "type" : "float",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "email_type",
+      "label" : "email_type",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "email_count",
+      "label" : "email_count",
+      "type" : "integer",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "login",
+      "label" : "login",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "vitex_id",
+      "label" : "vitex_id",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "badge_number",
+      "label" : "badge_number",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "username",
+      "label" : "username",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "password",
+      "label" : "password",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : null,
+      "mandatory" : false
+    }, {
+      "name" : "birth_date",
+      "label" : "birth_date",
+      "type" : "string",
+      "repeating" : false,
+      "default-value" : "",
+      "mandatory" : false
+    } ]
+  },
+  "links" : [ {
+    "rel" : "self",
+    "href" : "${contextPath}types/processes/wp02_registrationrequest"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/instances",
+    "href" : "${contextPath}processes/wp02_registrationrequest"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/halt"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/resume"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/terminate"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/tasks"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/attachments"
+  } ]
+}

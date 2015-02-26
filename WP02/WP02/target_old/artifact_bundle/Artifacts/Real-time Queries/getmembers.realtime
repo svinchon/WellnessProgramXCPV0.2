@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realtime:RealTimeSearch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" xmlns:realtime="http://xcp.emc.com/search/realtime" urn="urn:wp02:com.emc.xcp.artifact.search.realtime:Artifacts/Real-time Queries/getmembers.realtime" categoryId="com.emc.xcp.artifact.search.realtime" name="getmembers" label="GetMembers">
+  <datasource categoryId="com.emc.xcp.artifact.dataservice.datasourcecontract" name="getmembers" label="GetMembers" implCategoryId="com.emc.xcp.artifact.search.realtime">
+    <outputs xsi:type="nsDataserviceContract:AttributeElement" name="Result Count">
+      <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+    </outputs>
+    <outputs xsi:type="nsDataserviceContract:ArrayElement" name="Results">
+      <item xsi:type="nsDataserviceContract:StructureElement" name="Items">
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="gender" label="Gender">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="first_name" label="First Name">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="last_name" label="Last Name">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="email" label="Email">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="age" label="Age">
+          <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="weight" label="Weight">
+          <attributeType xsi:type="nsAttributeDatatypes:FloatType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="login" label="Login">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="last_data_update" label="Last Data Update">
+          <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Object ID" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_object_type" label="Object type" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+      </item>
+    </outputs>
+    <primaryElement>
+      <dataModel href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+    </primaryElement>
+  </datasource>
+  <columns label="Gender">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='gender']"/>
+    </contextSelection>
+  </columns>
+  <columns label="First Name">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='first_name']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Last Name">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='last_name']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Email">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='email']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Age">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='age']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Weight">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='weight']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Login">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='login']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Last Data Update">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#//@attributes[name='last_data_update']"/>
+    </contextSelection>
+  </columns>
+  <defaultSort ascending="true"/>
+  <dataType xsi:type="nsDatatypes:BusinessObject" href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+  <resultOrientation>
+    <dataRef href="urn:wp02:com.emc.xcp.artifact.bo:Artifacts/Business Objects/member.businessobj#/"/>
+  </resultOrientation>
+</realtime:RealTimeSearch>

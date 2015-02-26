@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<realtime-query-type data-type="${contextPath}types/business-objects/wp02_member" label="GetMembers" namespace="wp02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wp02_getmembers" xmlns="http://identifiers.emc.com/vocab/xcp">
+  <description/>
+  <properties>
+    <property mapping="gender" name="gender" output-name="gender" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="first_name" name="first_name" output-name="first_name" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="last_name" name="last_name" output-name="last_name" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="email" name="email" output-name="email" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="age" name="age" output-name="age" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="weight" name="weight" output-name="weight" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="login" name="login" output-name="login" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property mapping="last_data_update" name="last_data_update" output-name="last_data_update" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="" mandatory="true" mapping="r_object_id" name="r_object_id" output-name="id" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="" mandatory="true" mapping="r_object_type" name="r_object_type" output-name="r_object_type" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="ACL Name" mandatory="true" mapping="acl_name" name="acl_name" output-name="acl_name" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="ACL Domain" mandatory="true" mapping="acl_domain" name="acl_domain" output-name="acl_domain" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="Owner Permit" mandatory="true" mapping="owner_permit" name="owner_permit" output-name="owner_permit" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="Owner Name" mandatory="true" mapping="owner_name" name="owner_name" output-name="owner_name" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+    <property label="Lock Owner" mandatory="true" mapping="r_lock_owner" name="r_lock_owner" output-name="r_lock_owner" sortable="false" type="${contextPath}types/business-objects/wp02_member"/>
+  </properties>
+  <expression-set operator="AND"/>
+  <links>
+    <link href="${contextPath}types/realtime-queries/wp02_getmembers" rel="self"/>
+    <link href="${contextPath}realtime-queries/wp02_getmembers" rel="http://identifiers.emc.com/linkrel/instances"/>
+  </links>
+  <options>
+    <option versions="LATEST"/>
+    <option returnCount="false"/>
+  </options>
+</realtime-query-type>

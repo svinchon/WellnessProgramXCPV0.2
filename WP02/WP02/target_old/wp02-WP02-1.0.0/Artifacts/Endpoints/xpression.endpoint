@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsEndpoint:XPressionEndpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nsEndpoint="http://xcp.emc.com/endpoint" urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpression.endpoint" categoryId="com.emc.xcp.artifact.endpoint" name="xpression" label="xPression" serverURL="http://xpression45.iigfrance.com/" username="xDesigner" password="DM_ENCR_TEXT_V2=AAAAEGR/d7yBras/9yIisNY5a7KqOARGnEubzZ35ZXme0CGHtey3ZhbxCZYg/1Je4iTKqM6QvTXR6s4+S72RxZpMWmM="/>

@@ -1,0 +1,126 @@
+{
+  "name" : "realtime-query-type",
+  "type" : "wp02_getmembers",
+  "label" : "GetMembers",
+  "data-type" : "${contextPath}types/business-objects/wp02_member",
+  "description" : "",
+  "properties" : [ {
+    "name" : "gender",
+    "output-name" : "gender",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "gender",
+    "sortable" : "false"
+  }, {
+    "name" : "first_name",
+    "output-name" : "first_name",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "first_name",
+    "sortable" : "false"
+  }, {
+    "name" : "last_name",
+    "output-name" : "last_name",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "last_name",
+    "sortable" : "false"
+  }, {
+    "name" : "email",
+    "output-name" : "email",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "email",
+    "sortable" : "false"
+  }, {
+    "name" : "age",
+    "output-name" : "age",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "age",
+    "sortable" : "false"
+  }, {
+    "name" : "weight",
+    "output-name" : "weight",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "weight",
+    "sortable" : "false"
+  }, {
+    "name" : "login",
+    "output-name" : "login",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "login",
+    "sortable" : "false"
+  }, {
+    "name" : "last_data_update",
+    "output-name" : "last_data_update",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "last_data_update",
+    "sortable" : "false"
+  }, {
+    "name" : "r_object_id",
+    "output-name" : "id",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "r_object_id",
+    "sortable" : "false",
+    "mandatory" : "true"
+  }, {
+    "name" : "r_object_type",
+    "output-name" : "r_object_type",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "r_object_type",
+    "sortable" : "false",
+    "mandatory" : "true"
+  }, {
+    "label" : "ACL Name",
+    "name" : "acl_name",
+    "output-name" : "acl_name",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "acl_name",
+    "sortable" : "false",
+    "mandatory" : "true"
+  }, {
+    "label" : "ACL Domain",
+    "name" : "acl_domain",
+    "output-name" : "acl_domain",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "acl_domain",
+    "sortable" : "false",
+    "mandatory" : "true"
+  }, {
+    "label" : "Owner Permit",
+    "name" : "owner_permit",
+    "output-name" : "owner_permit",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "owner_permit",
+    "sortable" : "false",
+    "mandatory" : "true"
+  }, {
+    "label" : "Owner Name",
+    "name" : "owner_name",
+    "output-name" : "owner_name",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "owner_name",
+    "sortable" : "false",
+    "mandatory" : "true"
+  }, {
+    "label" : "Lock Owner",
+    "name" : "r_lock_owner",
+    "output-name" : "r_lock_owner",
+    "type" : "${contextPath}types/business-objects/wp02_member",
+    "mapping" : "r_lock_owner",
+    "sortable" : "false",
+    "mandatory" : "true"
+  } ],
+  "expression-set" : {
+    "properties" : [ ],
+    "operator" : "AND"
+  },
+  "options" : [ {
+    "versions" : "LATEST"
+  }, {
+    "returnCount" : "false"
+  } ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "${contextPath}types/realtime-queries/wp02_getmembers"
+  }, {
+    "rel" : "http://identifiers.emc.com/linkrel/instances",
+    "href" : "${contextPath}realtime-queries/wp02_getmembers"
+  } ]
+}
