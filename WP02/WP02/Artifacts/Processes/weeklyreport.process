@@ -3,6 +3,8 @@
   <activities name="Send HTTP/RESTful Request" activityType="BEGIN" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L1']" destFlows="//@flows[name='L2']">
     <trigger numOfInputFlows="1" expectedEventName="" canRunMultipleTimes="true"/>
     <transition xsi:type="nsActivity:AllFlowsTransition"/>
+    <timers/>
+    <calendar flag="Performer"/>
     <uiinfo imageScale="100" image="activity_autoext_48x32_proc.png">
       <topLeftPoint x="189" y="162"/>
       <textStyle fontName="Dialog" fontSize="10">
@@ -10,19 +12,19 @@
         <fgColor/>
       </textStyle>
     </uiinfo>
-    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>HTTP Outbound&lt;/Name>&#xA;    &lt;RuntimeModuleName>HTTPOutboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>HTTPOutboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration/>&#xA;    &lt;InputMsgCopyRules/>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
+    <performerConfig xsi:type="nsActivity:SvcDefBasedOutboundPerformerConfiguration" timeout="60" serviceDefinition="&lt;?xml version=&quot;1.0&quot;?>&#xA;&lt;ServiceDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;activity.xsd&quot;>&#xA;    &lt;Name>HTTP Outbound&lt;/Name>&#xA;    &lt;RuntimeModuleName>HTTPOutboundRuntimeModule&lt;/RuntimeModuleName>&#xA;    &lt;DesignModuleName>HTTPOutboundDesignModule&lt;/DesignModuleName>&#xA;    &lt;Configuration>&#xA;        &lt;Parameter>&#xA;            &lt;Name>HTTP_CONNECTION_TIMEOUT&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[1]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>HTTP_MESSAGE_TYPE_CONFIG_PARAM&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[POST]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>HTTP_ALLOW_MULTI_PART&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[true]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_URN&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper_ini.endpoint]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;        &lt;Parameter>&#xA;            &lt;Name>ENDPOINT_LABEL&lt;/Name>&#xA;            &lt;Value>&lt;![CDATA[xPressionHelper_InitiateXBatchjob]]>&lt;/Value>&#xA;            &lt;Type>String&lt;/Type>&#xA;        &lt;/Parameter>&#xA;    &lt;/Configuration>&#xA;    &lt;InputMsgCopyRules/>&#xA;    &lt;OutputMsgCopyRules/>&#xA;    &lt;CorrelationMsgCopyRules/>&#xA;    &lt;UserDefinedInputTreeNodes/>&#xA;    &lt;UserDefinedOutputTreeNodes/>&#xA;    &lt;InputSchemaConfigs/>&#xA;    &lt;OutputSchemaConfigs/>&#xA;&lt;/ServiceDefinition>&#xA;">
       <performer>
-        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig" valueArity="Single"/>
+        <dataResolutionConfig xsi:type="nsCommon:PredefinedResolutionConfig"/>
       </performer>
       <methodFailure/>
     </performerConfig>
-    <variableCharacteristics key="//@processData/@variables[name='job_name']">
-      <value visible="true"/>
-    </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='data_origin']">
       <value visible="true"/>
     </variableCharacteristics>
     <variableCharacteristics key="//@processData/@variables[name='data_file_name']">
+      <value visible="true"/>
+    </variableCharacteristics>
+    <variableCharacteristics key="//@processData/@variables[name='job_name']">
       <value visible="true"/>
     </variableCharacteristics>
     <eventConfigs label="Activity Completed">
@@ -126,7 +128,7 @@
     </variables>
   </processData>
   <flows name="L1" from="//@activities[name='Initiate']" to="//@activities[name='Send%20HTTP%2FRESTful%20Request']">
-    <uiinfo labelText="" destActivityLocIndex="1">
+    <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
         <points x="66" y="144"/>
         <points x="115" y="144"/>
@@ -137,7 +139,7 @@
     </uiinfo>
   </flows>
   <flows name="L2" from="//@activities[name='Send%20HTTP%2FRESTful%20Request']" to="//@activities[name='Set%20Process%20Data']">
-    <uiinfo labelText="" destActivityLocIndex="1">
+    <uiinfo destActivityLocIndex="1">
       <line multiSegment="true">
         <points x="213" y="144"/>
         <points x="258" y="144"/>
@@ -157,18 +159,18 @@
       </textStyle>
     </startActivityUIInfo>
     <endActivityUIInfo imageScale="100" image="palette/event_end_32_proc.png">
-      <topLeftPoint x="469" y="154"/>
+      <topLeftPoint x="468" y="154"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
       </textStyle>
     </endActivityUIInfo>
-    <endSequenceFlowUIInfo labelText="" destActivityLocIndex="4">
+    <endSequenceFlowUIInfo destActivityLocIndex="4">
       <line multiSegment="true">
         <points x="352" y="143"/>
-        <points x="403" y="143"/>
-        <points x="403" y="144"/>
-        <points x="454" y="144"/>
+        <points x="402" y="143"/>
+        <points x="402" y="144"/>
+        <points x="453" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </endSequenceFlowUIInfo>

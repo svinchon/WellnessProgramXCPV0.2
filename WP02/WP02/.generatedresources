@@ -1,4 +1,4 @@
-#Wed Feb 25 17:22:19 EST 2015
+#Sun Mar 01 07:37:09 EST 2015
 Artifacts/Resources/shield_delete_32.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\shield_delete_32.png
 Artifacts/Resources/calendar_view_day.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\calendar_view_day.png
 Artifacts/Pages/view_base_content.page_2=\\WP02\\gen\\main\\webapp\\pages\\xcp_dm_document\\wp02_view_base_content.json
@@ -511,6 +511,8 @@ Artifacts/Resources/sheduled_task_32.png_0=\\WP02\\gen\\main\\webapp\\images\\xc
 Artifacts/Resources/music.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\music.png
 Artifacts/Resources/comments_32.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\comments_32.png
 Artifacts/Fragments/user_preferences_fr.fragment_0=\\WP02\\gen\\main\\webapp\\fragments\\application\\xcp_user_preferences_fr.json
+Artifacts/Processes/weeklyreport.process_1=\\WP02\\gen\\main\\resources\\types\\dml\\processes\\wp02_weeklyreport\\wp02_weeklyreport.dml
+Artifacts/Processes/weeklyreport.process_0=\\WP02\\gen\\main\\resources\\types\\json\\processes\\wp02_weeklyreport\\wp02_weeklyreport.json
 Artifacts/Resources/time_delete.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\time_delete.png
 Artifacts/Resources/email_32.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\email_32.png
 Artifacts/Resources/group_delete_32.png_0=\\WP02\\gen\\main\\webapp\\images\\xcpcomm\\group_delete_32.png
