@@ -30,4 +30,6 @@
   <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/dfchelper.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/dfchelper.endpoint" label="DFCHelper" name="dfchelper"/>
   <indexes urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/weeklyreport.process" categoryId="com.emc.ide.artifact.process" path="Artifacts/Processes/weeklyreport.process" label="WeeklyReport" name="weeklyreport"/>
   <indexes urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper_ini.endpoint" categoryId="com.emc.xcp.artifact.endpoint" path="Artifacts/Endpoints/xpressionhelper_ini.endpoint" label="xPressionHelper_InitiateXBatchjob" name="xpressionhelper_ini"/>
+  <indexes urn="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/viewmemberdata.page" categoryId="com.emc.xcp.artifact.page" path="Artifacts/Pages/viewmemberdata.page" label="ViewMemberData" name="viewmemberdata"/>
+  <indexes urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/monthlyreport.process" categoryId="com.emc.ide.artifact.process" path="Artifacts/Processes/monthlyreport.process" label="MonthlyReport" name="monthlyreport"/>
 </Artifact:ArtifactIndexes>
