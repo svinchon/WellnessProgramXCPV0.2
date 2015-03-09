@@ -78,7 +78,7 @@
           <propertyMap key="cls" value="//@rootContainer/@children.0/@children.0/@children.0/@properties.10"/>
           <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@properties.11"/>
           <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button1']">
-            <properties name="text" value="Members" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.0"/>
+            <properties name="text" value="Summary" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.0"/>
             <properties name="iconCls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.1"/>
             <properties name="xcp_menu_onhover" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.2"/>
             <properties name="xcp_nav_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.3"/>
@@ -94,9 +94,9 @@
             <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.9"/>
             <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.10"/>
             <properties name="xcpId" value="nav_button1" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.11"/>
-            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_viewmembers" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.12">
+            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_summary" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@propertyMap.12">
               <data selectionName="view_hp_members" selectionLabel="View_HP_Members">
-                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/viewmembers.page#/"/>
+                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/summary.page#/"/>
               </data>
             </properties>
             <propertyMap key="text" value="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@properties.0"/>
@@ -113,8 +113,8 @@
             <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@properties.11"/>
             <propertyMap key="xcp_nav_url" value="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@properties.12"/>
           </children>
-          <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button2']">
-            <properties name="text" value="Member Data" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.0"/>
+          <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button']">
+            <properties name="text" value="Simulation" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.0"/>
             <properties name="iconCls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.1"/>
             <properties name="xcp_menu_onhover" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.2"/>
             <properties name="xcp_nav_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.3"/>
@@ -122,17 +122,13 @@
             <properties name="xcp_page_sel_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.5"/>
             <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.6"/>
             <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.7"/>
-            <properties name="hidden" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.8">
-              <eventBasedExpressions>
-                <expression exprStr="WP02.user.currentUserRoleLabel=='HealthProgramMember'"/>
-              </eventBasedExpressions>
-            </properties>
+            <properties name="hidden" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.8"/>
             <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.9"/>
             <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.10"/>
-            <properties name="xcpId" value="nav_button2" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.11"/>
-            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_viewmembers" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.12">
-              <data selectionName="viewmembers" selectionLabel="ViewMembers">
-                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/viewmembers.page#/"/>
+            <properties name="xcpId" value="nav_button" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.11"/>
+            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_simulation" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.12">
+              <data selectionName="simulation" selectionLabel="Simulation">
+                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/simulation.page#/"/>
               </data>
             </properties>
             <propertyMap key="text" value="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@properties.0"/>
@@ -149,8 +145,8 @@
             <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@properties.11"/>
             <propertyMap key="xcp_nav_url" value="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@properties.12"/>
           </children>
-          <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button']">
-            <properties name="text" value="My Member Data" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.0"/>
+          <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button2']">
+            <properties name="text" value="Program Configuration" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.0"/>
             <properties name="iconCls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.1"/>
             <properties name="xcp_menu_onhover" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.2"/>
             <properties name="xcp_nav_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.3"/>
@@ -158,13 +154,17 @@
             <properties name="xcp_page_sel_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.5"/>
             <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.6"/>
             <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.7"/>
-            <properties name="hidden" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.8"/>
+            <properties name="hidden" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.8">
+              <eventBasedExpressions>
+                <expression exprStr="WP02.user.currentUserRoleLabel=='HealthProgramMember'"/>
+              </eventBasedExpressions>
+            </properties>
             <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.9"/>
             <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.10"/>
-            <properties name="xcpId" value="nav_button" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.11"/>
-            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_viewmembers" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.12">
-              <data selectionName="viewmembers" selectionLabel="ViewMembers">
-                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/viewmembers.page#/"/>
+            <properties name="xcpId" value="nav_button2" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.11"/>
+            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_program_configurati" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@propertyMap.12">
+              <data selectionName="program_configurati" selectionLabel="Program Configuration">
+                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/program_configurati.page#/"/>
               </data>
             </properties>
             <propertyMap key="text" value="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@properties.0"/>
@@ -181,43 +181,11 @@
             <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@properties.11"/>
             <propertyMap key="xcp_nav_url" value="//@rootContainer/@children.0/@children.0/@children.0/@children.2/@properties.12"/>
           </children>
-          <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button3']">
-            <properties name="text" value="My Member Index" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.0"/>
-            <properties name="iconCls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.1"/>
-            <properties name="xcp_menu_onhover" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.2"/>
-            <properties name="xcp_nav_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.3"/>
-            <properties name="xcp_link_type" value="application" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.4"/>
-            <properties name="xcp_page_sel_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.5"/>
-            <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.6"/>
-            <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.7"/>
-            <properties name="hidden" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.8"/>
-            <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.9"/>
-            <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.10"/>
-            <properties name="xcpId" value="nav_button3" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.11"/>
-            <properties xsi:type="uitemplate:DataboundProperty" name="xcp_nav_url" value="application/wp02_viewmembers" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.12">
-              <data selectionName="viewmembers" selectionLabel="ViewMembers">
-                <dataRef href="urn:wp02:com.emc.xcp.artifact.page:Artifacts/Pages/viewmembers.page#/"/>
-              </data>
-            </properties>
-            <propertyMap key="text" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.0"/>
-            <propertyMap key="iconCls" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.1"/>
-            <propertyMap key="xcp_menu_onhover" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.2"/>
-            <propertyMap key="xcp_nav_type" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.3"/>
-            <propertyMap key="xcp_link_type" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.4"/>
-            <propertyMap key="xcp_page_sel_type" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.5"/>
-            <propertyMap key="redirectPageUrlName" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.6"/>
-            <propertyMap key="redirectObjectId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.7"/>
-            <propertyMap key="hidden" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.8"/>
-            <propertyMap key="disabled" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.9"/>
-            <propertyMap key="cls" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.10"/>
-            <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.11"/>
-            <propertyMap key="xcp_nav_url" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.12"/>
-          </children>
           <children componentDefinitionId="xcp_user_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='user_button']">
-            <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.4/@propertyMap.0"/>
-            <properties name="xcpId" value="user_button" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.4/@propertyMap.1"/>
-            <propertyMap key="cls" value="//@rootContainer/@children.0/@children.0/@children.0/@children.4/@properties.0"/>
-            <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.4/@properties.1"/>
+            <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.0"/>
+            <properties name="xcpId" value="user_button" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@propertyMap.1"/>
+            <propertyMap key="cls" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.0"/>
+            <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3/@properties.1"/>
           </children>
         </children>
       </children>
@@ -240,9 +208,8 @@
   <widgetMap key="columnhbox" value="//@rootContainer/@children.0/@children.0"/>
   <widgetMap key="navigation_menu" value="//@rootContainer/@children.0/@children.0/@children.0"/>
   <widgetMap key="nav_button1" value="//@rootContainer/@children.0/@children.0/@children.0/@children.0"/>
-  <widgetMap key="user_button" value="//@rootContainer/@children.0/@children.0/@children.0/@children.4"/>
+  <widgetMap key="user_button" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3"/>
   <widgetMap key="page" value="//@rootContainer/@children.1"/>
-  <widgetMap key="nav_button2" value="//@rootContainer/@children.0/@children.0/@children.0/@children.1"/>
-  <widgetMap key="nav_button" value="//@rootContainer/@children.0/@children.0/@children.0/@children.2"/>
-  <widgetMap key="nav_button3" value="//@rootContainer/@children.0/@children.0/@children.0/@children.3"/>
+  <widgetMap key="nav_button2" value="//@rootContainer/@children.0/@children.0/@children.0/@children.2"/>
+  <widgetMap key="nav_button" value="//@rootContainer/@children.0/@children.0/@children.0/@children.1"/>
 </uitemplate:Page>

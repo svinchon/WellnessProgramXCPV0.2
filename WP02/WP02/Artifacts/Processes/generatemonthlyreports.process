@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsProcess:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsActivity="http://documentum.com/bpm/activity" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsCommon="http://documentum.com/common" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsProcess="http://documentum.com/bpm/process" urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/monthlyreport.process" categoryId="com.emc.ide.artifact.process" name="monthlyreport" label="MonthlyReport" description="" webServiceTargetNamespace="" workflowInstructions="" synchronous="true">
+<nsProcess:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsActivity="http://documentum.com/bpm/activity" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsCommon="http://documentum.com/common" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsProcess="http://documentum.com/bpm/process" urn="urn:wp02:com.emc.ide.artifact.process:Artifacts/Processes/generatemonthlyreports.process" categoryId="com.emc.ide.artifact.process" name="generatemonthlyreports" label="generateMonthlyReports" description="" webServiceTargetNamespace="" workflowInstructions="" synchronous="true">
   <activities name="Send HTTP/RESTful Request" activityType="BEGIN" description="" priority="Medium" taskName="" taskInstructions="" sourceFlows="//@flows[name='L1']" destFlows="//@flows[name='L2']">
     <trigger numOfInputFlows="1" expectedEventName="" canRunMultipleTimes="true"/>
     <transition xsi:type="nsActivity:AllFlowsTransition"/>
@@ -21,10 +21,10 @@
     <variableCharacteristics key="//@processData/@variables[name='data_file_name']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='job_name']">
+    <variableCharacteristics key="//@processData/@variables[name='data_origin']">
       <value visible="true"/>
     </variableCharacteristics>
-    <variableCharacteristics key="//@processData/@variables[name='data_origin']">
+    <variableCharacteristics key="//@processData/@variables[name='job_name']">
       <value visible="true"/>
     </variableCharacteristics>
     <eventConfigs label="Activity Completed">
@@ -53,8 +53,8 @@
     <variableCharacteristics key="//@processData/@variables[name='data_file_name']">
       <value visible="true"/>
     </variableCharacteristics>
-    <taskContract categoryId="com.emc.ide.artifact.process.activity.taskcontract" name="monthlyreport_initiate" label="Initiate">
-      <dataServiceContracts xsi:type="nsDataserviceContract:DataActionContract" categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_create_monthlyreport_initiate" label="Initiate Process MonthlyReport" implCategoryId="com.emc.ide.artifact.process.activity.taskcontract">
+    <taskContract categoryId="com.emc.ide.artifact.process.activity.taskcontract" name="generatemonthlyreports_initiate" label="Initiate">
+      <dataServiceContracts xsi:type="nsDataserviceContract:DataActionContract" categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_create_monthlyreport_initiate" label="Initiate Process generateMonthlyReports" implCategoryId="com.emc.ide.artifact.process.activity.taskcontract">
         <inputs xsi:type="nsDataserviceContract:StructureElement" name="processVariables" label="Variables">
           <elements xsi:type="nsDataserviceContract:AttributeElement" name="data_file_name" label="data_file_name">
             <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
@@ -72,7 +72,7 @@
         <primaryElement name="monthlyreport_initiate" dataModel="//@activities[name='Initiate']/@taskContract"/>
         <actionType type="Create"/>
       </dataServiceContracts>
-      <dataServiceContracts xsi:type="nsDataserviceContract:DataActionContract" categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_invoke_stateless_processmonthlyreport_initiate" label="MonthlyReport" implCategoryId="com.emc.ide.artifact.process.activity.taskcontract">
+      <dataServiceContracts xsi:type="nsDataserviceContract:DataActionContract" categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_invoke_stateless_processmonthlyreport_initiate" label="generateMonthlyReports" implCategoryId="com.emc.ide.artifact.process.activity.taskcontract">
         <primaryElement name="monthlyreport_initiate" dataModel="//@activities[name='Initiate']/@taskContract"/>
         <actionType type="InitiateStatelessProcess"/>
       </dataServiceContracts>
@@ -159,7 +159,7 @@
       </textStyle>
     </startActivityUIInfo>
     <endActivityUIInfo imageScale="100" image="palette/event_end_32_proc.png">
-      <topLeftPoint x="465" y="154"/>
+      <topLeftPoint x="464" y="154"/>
       <textStyle fontName="Dialog" fontSize="10">
         <bgColor/>
         <fgColor/>
@@ -167,10 +167,10 @@
     </endActivityUIInfo>
     <endSequenceFlowUIInfo destActivityLocIndex="4">
       <line multiSegment="true">
-        <points x="352" y="144"/>
-        <points x="401" y="144"/>
-        <points x="401" y="144"/>
-        <points x="450" y="144"/>
+        <points x="352" y="143"/>
+        <points x="400" y="143"/>
+        <points x="400" y="144"/>
+        <points x="449" y="144"/>
       </line>
       <labelStyle fontName="Helvetica" fontSize="10"/>
     </endSequenceFlowUIInfo>

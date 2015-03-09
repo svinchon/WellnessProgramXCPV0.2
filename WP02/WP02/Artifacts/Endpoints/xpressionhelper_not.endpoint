@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsEndpoint:HTTPEndpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nsEndpoint="http://xcp.emc.com/endpoint" urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xpressionhelper_not.endpoint" categoryId="com.emc.xcp.artifact.endpoint" name="xpressionhelper_not" label="xPressionHelper_NotifyOfNewXCPUser" url="http://xcp:8080/WellnessProgramRegistration/notifyOfNewXCPMember"/>

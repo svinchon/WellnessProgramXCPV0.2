@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsEndpoint:WebserviceEndpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nsEndpoint="http://xcp.emc.com/endpoint" urn="urn:wp02:com.emc.xcp.artifact.endpoint:Artifacts/Endpoints/xdbhelper.endpoint" categoryId="com.emc.xcp.artifact.endpoint" name="xdbhelper" label="XDBHelper" wsdlURL="http://xpression:18080/XDBHelper/services/XDBHelper?WSDL"/>

@@ -1,0 +1,3581 @@
+/******************************
+ SASS imports                
+******************************/
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Ext JS.
+ */
+/**
+ * Creates a background gradient.
+ *
+ * @param {Color} $bg-color The background color of the gradient
+ * @param {String/List} [$type] The type of gradient to be used. Can either
+ * be a String which is a predefined gradient, or it can can be a list of
+ * color_stops. If none is set, it will still set the `background-color`
+ * to the $background-color.
+ * @param {String} [$direction=top] The direction of the gradient. Can either be
+ * `top` or `left`.
+ * @member Global_CSS
+ */
+/*
+ * Method which inserts a full background-image property for a theme image.
+ * It checks if the file exists and if it doesn't, it'll throw an error.
+ * By default it will not include the background-image property if it is not found,
+ * but this can be changed by changing the default value of $include-missing-images to
+ * be true.
+ */
+/**
+ * @class Ext.Component
+ */
+/**
+ * @var {color} $color
+ * The default text color to be used throughout the theme.
+ */
+/**
+ * @var {string} $font-family
+ * The default font-family to be used throughout the theme.
+ */
+/**
+ * @var {string} $font-size
+ * The default font-family to be used throughout the theme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The base gradient to be used throughout the theme.
+ */
+/**
+ * @var {color} $base-color
+ * The base color to be used throughout the theme.
+ */
+/**
+ * @var {color} $neutral-color
+ * The neutral color to be used throughout the theme.
+ */
+/**
+ * @var {color} $body-background-color
+ * Background color to apply to the body element
+ */
+/**
+ * @class Ext.button.Button
+ */
+/**
+ * @var {boolean} $button-include-ui-menu-arrows
+ * True to use a different image url for the menu button arrows for each button UI
+ */
+/**
+ * @var {boolean} $button-include-ui-split-arrows
+ * True to use a different image url for the split button arrows for each button UI
+ */
+/**
+ * @var {boolean} $button-include-split-over-arrows
+ * True to include different split arrows for buttons' hover state.
+ */
+/**
+ * @var {boolean} $button-toolbar-include-split-noline-arrows
+ * True to include "noline" split arrows for toolbar buttons in their default state.
+ */
+/**
+ * @var {number} $button-opacity-disabled
+ * opacity to apply to the button's main element when the buton is disabled
+ */
+/**
+ * @var {number} $button-inner-opacity-disabled
+ * opacity to apply to the button's inner elements (icon and text) when the buton is disabled
+ */
+/**
+ * @var {number} $button-toolbar-opacity-disabled
+ * opacity to apply to the toolbar button's main element when the buton is disabled
+ */
+/**
+ * @var {number} $button-toolbar-inner-opacity-disabled
+ * opacity to apply to the toolbar button's inner elements (icon and text) when the buton is disabled
+ */
+/**
+ * @class Ext.panel.Panel
+ */
+/**
+ * @var {$border-width-threshold}
+ * The maximum width a Panel's border can be before resizer handles are embedded into the borders using negative absolute positions.
+ *
+ * This defaults to 2, so that in the classic theme which uses 1 pixel borders, resize handles are in the content area
+ * within the border as they always have been.
+ *
+ * In the Neptune theme, the handles are embedded into the 5 pixel wide borders of any framed panel.
+ */
+/**
+ * @class Ext.form.Labelable
+ */
+/**
+ * @var {measurement} $form-error-icon-width
+ * Width for form error icons.
+ */
+/**
+ * @var {measurement} $form-error-icon-right-margin
+ * Margin for error icons that are aligned to the side of the field
+ */
+/**
+ * @var {measurement} $form-error-under-icon-spacing
+ * The space between the icon and the message for errors that display under the field
+ */
+/**
+ * @var {measurement} $form-error-under-padding
+ * The space between the icon and the message for errors that display under the field
+ */
+/**
+ * @var {measurement} $form-item-margin-bottom
+ * The bottom margin to apply to form items when in auto, anchor, vbox, or table layout
+ */
+/**
+ * @class Ext.form.field.Base
+ */
+/**
+ * @var {measurement} $form-field-height
+ * Height for form fields.
+ */
+/**
+ * @var {measurement} $form-toolbar-field-height
+ * Height for form fields in toolbar.
+ */
+/**
+ * @var {measurement} $form-field-padding
+ * Padding around form fields.
+ */
+/**
+ * @var {measurement} $form-field-font-size
+ * Font size for form fields.
+ */
+/**
+ * @var {font-family} $form-field-font-family
+ * Font family for form fields.
+ */
+/**
+ * @var {font-weight} $form-field-font-weight
+ * Font weight for form fields.
+ */
+/**
+ * @var {font} $form-field-font
+ * Font for form fields.
+ */
+/**
+ * @var {color} $form-field-color
+ * Text color for form fields.
+ */
+/**
+ * @var {color} $form-field-empty-color
+ * Text color for empty form fields.
+ */
+/**
+ * @var {color} $form-field-border-color
+ * Border color for form fields.
+ */
+/**
+ * @var {measurement} $form-field-border-width
+ * Border width for form fields.
+ */
+/**
+ * @var {string} $form-field-border-style
+ * Border style for form fields.
+ */
+/**
+ * @var {color} $form-field-focus-border-color
+ * Border color for focused form fields.
+ */
+/**
+ * @var {color} $form-field-invalid-border-color
+ * Border color for invalid form fields.
+ */
+/**
+ * @var {color} $form-field-background-color
+ * Background color for form fields.
+ */
+/**
+ * @var {string} $form-field-background-image
+ * Background image for form fields.
+ */
+/**
+ * @var {color} $form-field-invalid-background-color
+ * Background color for invalid form fields.
+ */
+/**
+ * @var {string} $form-field-invalid-background-image
+ * Background image for invalid form fields.
+ */
+/**
+ * @var {background-repeat} $form-field-invalid-background-repeat
+ * Background repeat for invalid form fields.
+ */
+/**
+ * @var {background-position} $form-field-invalid-background-position
+ * Background position for invalid form fields.
+ */
+/**
+ * @var {number} $form-field-disabled-opacity
+ */
+/**
+ * @class Ext.form.field.Display
+ */
+/**
+ * @var {font} $form-display-field-font
+ * Font for form display fields.
+ */
+/**
+ * @var {color} $form-display-field-color
+ * Text color for form display fields.
+ */
+/**
+ * @class Ext.form.FieldSet
+ */
+/**
+ * @var {string} $fieldset-collapse-tool-background-image
+ * The background-image to use for the collapse tool. If null the default tool
+ * sprite will be used.  Defaults to null.
+ */
+/**
+ * @class Ext.form.field.Checkbox
+ */
+/**
+ * @var {measurement} $form-checkbox-label-spacing
+ * The space between the label and the checkbox.
+ */
+/**
+ * @var {measurement} $form-checkbox-vertical-position-adjust
+ * adjustment for vertical positioning of checkbox.  An adjustment of a pixel or two may
+ * be needed to achieve the desired vertical alignment of the checkbox with the label in
+ * cetain combinations of field-height and checkbox height
+ */
+/**
+ * @class Ext.menu.Menu
+ */
+/**
+ * @var {color} $menu-glyph-color
+ * The color to use for menu icons configured using {@link Ext.menu.Item#glyph glyph}
+ */
+/**
+ * @class Ext.tab.Panel
+ */
+/**
+ * var {boolean} $tabbar-closable-icon-include-hover-background-position
+ * true to change the x postition of the close icon background image on hover to allow for a
+ * horizonatlly alined background image sprite
+ */
+/**
+ * var {boolean} $tabbar-closable-icon-include-pressed-background-position
+ * true to change the x postition of the close icon background image on click to allow for a
+ * horizonatlly alined background image sprite
+ */
+/**
+ * var {boolean} $tabbar-scroller-include-hover-background-position
+ * true to change the x postition of the background image on hover to allow for a
+ * horizonatlly alined background image sprite
+ */
+/**
+ * var {boolean} $tabbar-scroller-include-plain-icon
+ * true to include separate scroller icons for "plain" tabbars
+ */
+/**
+ * var {boolean} $tabbar-scroller-symmetrical-icons
+ * if true, the tabbar will use symmetrical scroller icons.  Top and bottom tabbars
+ * will share icons, and Left and right will share icons.
+ */
+/**
+ * var {number} $tab-opacity-disabled
+ * opacity to apply to the tab's main element when the tab is disabled
+ */
+/**
+ * var {number} $tab-text-opacity-disabled
+ * opacity to apply to the tab's  text element when the tab is disabled
+ */
+/**
+ * var {number} $tab-icon-opacity-disabled
+ * opacity to apply to the tab's icon element when the tab is disabled
+ */
+/**
+ * var {string} $tab-left-rotate-direction
+ * @private
+ * Has issues with IE
+ * The direction to rotate the contents of a left-aligned tab.  `right` to rotate
+ * clockwise or `left` to rotate counterclockwise. Defaults to `left`.
+ */
+/**
+ * var {string} $tab-right-rotate-direction
+ * @private
+ * Has issues with IE
+ * The direction to rotate the contents of a right-aligned tab.  `right` to rotate
+ * clockwise or `left` to rotate counterclockwise. Defaults to `right`.
+ */
+/**
+ * @class Ext.Component
+ */
+/**
+ * @var {string} $prefix
+ * The prefix to be applied to all CSS selectors. If this is changed, it must also be changed in your
+ * JavaScript application.
+ */
+/**
+ * @var {boolean/string} $relative-image-path-for-uis
+ * True to use a relative image path for all new UIs. If true, the path will be "../images/".
+ * It can also be a string of the path value.
+ * It defaults to false, which means it will look for the images in the ExtJS SDK folder.
+ */
+/**
+ * @var {boolean} $include-not-found-images
+ * True to include files which are not found when compiling your SASS
+ */
+/**
+ * @var {boolean} $include-ie
+ * True to include Internet Explorer specific rules
+ */
+/**
+ * @var {boolean} $include-ff
+ * True to include Firefox specific rules
+ */
+/**
+ * @var {boolean} $include-chrome
+ * True to include Chrome specific rules
+ */
+/**
+ * @var {boolean} $include-safari
+ * True to include Safari specific rules
+ */
+/**
+ * @var {boolean} $include-opera
+ * True to include Opera specific rules
+ */
+/**
+ * @var {boolean} $include-webkit
+ * True to include Webkit specific rules
+ */
+/**
+ * @var {boolean} $compile-all
+ * True to copile all CSS, even if above include rules are false
+ */
+/**
+ * @var {measurement} $css-shadow-border-radius
+ * The border radius for CSS shadows
+ */
+/**
+ * @var {color} $include-shadow-images
+ * True to include all shadow images.
+ */
+/**
+ * @var {boolean} $include-rtl
+ * True to include right-to-left styles
+ */
+/**
+ * @var {string} $image-extension
+ * default file extension to use for images (defaults to 'png').
+ */
+/**
+ * @var {string} $slicer-image-extension
+ * default file extension to use for slicer images (defaults to 'gif').
+ */
+/**
+ * Default search path for images
+ */
+/* line 1, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn {
+  display: inline-block;
+  position: relative;
+  zoom: 1;
+  *display: inline;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+/* line 15, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-wrap {
+  position: relative;
+}
+
+/* line 19, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-button {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  outline: 0;
+  zoom: 1;
+}
+
+/* line 28, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 35, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-icon-el {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* line 45, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner-center {
+  text-align: center;
+}
+
+/* line 49, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner-left {
+  text-align: left;
+}
+
+/* line 59, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner-right {
+  text-align: right;
+}
+
+/**
+ * Creates a visual theme of an Ext.Button
+ * @member Ext.button.Button
+ */
+/* line 71, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small {
+  border-color: #bbbbbb;
+}
+
+/* line 143, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 2px 2px 2px 2px;
+  border-width: 1px;
+  border-style: solid;
+  background-image: none;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(top, #ffffff, #eeeeee);
+}
+
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-mc {
+  background-image: url(../themes/images/gray/btn/btn-default-small-fbg.gif);
+  background-position: 0 top;
+  background-color: #f8f8f8;
+}
+
+/* line 218, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nlg .x-btn-default-small {
+  background-image: url(../themes/images/gray/btn/btn-default-small-bg.gif);
+  background-position: 0 top;
+}
+
+/* line 241, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nbr .x-btn-default-small {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+/* line 260, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+body.x-nbr .x-btn-default-small {
+  /* Pass along Div/Table, Horz/Vert, border-radius and border-width: */
+  background-image: url("about:blank#th-3-3-3-3-1-1-1-1-2-2-2-2");
+}
+
+/* line 315, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tl {
+  background-position: 0 -6px;
+}
+
+/* line 319, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tr {
+  background-position: right -9px;
+}
+
+/* line 323, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-bl {
+  background-position: 0 -12px;
+}
+
+/* line 327, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-br {
+  background-position: right -15px;
+}
+
+/* line 331, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-ml {
+  background-position: 0 top;
+}
+
+/* line 335, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-mr {
+  background-position: right top;
+}
+
+/* line 339, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tc {
+  background-position: 0 0;
+}
+
+/* line 343, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-bc {
+  background-position: 0 -3px;
+}
+
+/* line 350, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tr,
+.x-btn-default-small-br,
+.x-btn-default-small-mr {
+  padding-right: 3px;
+}
+
+/* line 356, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tl,
+.x-btn-default-small-bl,
+.x-btn-default-small-ml {
+  padding-left: 3px;
+}
+
+/* line 360, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tc {
+  height: 3px;
+}
+
+/* line 363, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-bc {
+  height: 3px;
+}
+
+/* line 374, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-tl,
+.x-btn-default-small-bl,
+.x-btn-default-small-tr,
+.x-btn-default-small-br,
+.x-btn-default-small-tc,
+.x-btn-default-small-bc,
+.x-btn-default-small-ml,
+.x-btn-default-small-mr {
+  zoom: 1;
+  background-image: url(../themes/images/gray/btn/btn-default-small-corners.gif);
+}
+
+/* line 418, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-ml,
+.x-btn-default-small-mr {
+  zoom: 1;
+  background-image: url(../themes/images/gray/btn/btn-default-small-sides.gif);
+}
+
+/* line 430, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-small-mc {
+  padding: 0px 0px 0px 0px;
+}
+
+/* line 439, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-strict .x-ie7 .x-btn-default-small-tl,
+.x-strict .x-ie7 .x-btn-default-small-bl {
+  position: relative;
+  right: 0;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-small:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, frame-bg:url(../themes/images/gray/btn/btn-default-small-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-small-bg.gif), corners:url(../themes/images/gray/btn/btn-default-small-corners.gif), sides:url(../themes/images/gray/btn/btn-default-small-sides.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-inner {
+  font-size: 11px;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  color: #333333;
+  padding: 0 4px;
+}
+/* line 86, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-arrow {
+  background-image: url(../themes/images/gray/button/arrow.gif);
+}
+/* line 94, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-arrow-right {
+  padding-right: 12px;
+}
+/* line 105, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-arrow-bottom {
+  padding-bottom: 12px;
+}
+/* line 109, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-glyph {
+  font-size: 16px;
+  line-height: 16px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 128, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie8m .x-btn-default-small .x-btn-glyph {
+  color: #959595;
+}
+
+/* line 134, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-disabled {
+  border-color: #d7d7d7;
+  background-image: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f4f4), color-stop(100%, #e2e2e2));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: linear-gradient(top, #f4f4f4, #e2e2e2);
+}
+
+/* line 160, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon .x-btn-button,
+.x-btn-default-small-noicon .x-btn-button {
+  height: 16px;
+}
+/* line 164, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon .x-btn-inner,
+.x-btn-default-small-noicon .x-btn-inner {
+  line-height: 16px;
+}
+
+/* line 174, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-small-noicon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-small-icon-text-left .x-btn-arrow-right .x-btn-inner {
+  padding-right: 0;
+}
+
+/* line 189, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon .x-btn-inner {
+  width: 16px;
+  padding: 0;
+}
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon .x-btn-icon-el {
+  width: 16px;
+  height: 16px;
+}
+
+/* line 202, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-left .x-btn-button {
+  height: 16px;
+}
+/* line 207, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-left .x-btn-inner {
+  line-height: 16px;
+  padding-left: 20px;
+}
+/* line 223, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-left .x-btn-icon-el {
+  width: 16px;
+  right: auto;
+}
+/* line 228, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-small-icon-text-left .x-btn-icon-el, .x-quirks .x-btn-default-small-icon-text-left .x-btn-icon-el {
+  height: 16px;
+}
+
+/* line 242, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-right .x-btn-button {
+  height: 16px;
+}
+/* line 247, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-right .x-btn-inner {
+  line-height: 16px;
+  padding-right: 20px;
+}
+/* line 259, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-right .x-btn-icon-el {
+  width: 16px;
+  left: auto;
+}
+/* line 264, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-small-icon-text-right .x-btn-icon-el, .x-quirks .x-btn-default-small-icon-text-right .x-btn-icon-el {
+  height: 16px;
+}
+
+/* line 278, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-top .x-btn-inner {
+  padding-top: 20px;
+}
+/* line 282, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-top .x-btn-icon-el {
+  height: 16px;
+  bottom: auto;
+}
+/* line 290, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-small-icon-text-top .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-small-icon-text-top .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 298, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-bottom .x-btn-inner {
+  padding-bottom: 20px;
+}
+/* line 302, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-icon-text-bottom .x-btn-icon-el {
+  height: 16px;
+  top: auto;
+}
+/* line 310, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-small-icon-text-bottom .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-small-icon-text-bottom .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 317, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-over {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -o-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: linear-gradient(top, #fbfbfb, #e9e9e9);
+}
+
+/* line 341, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-focus {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -o-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: linear-gradient(top, #fbfbfb, #e9e9e9);
+}
+
+/* line 366, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-menu-active,
+.x-btn-default-small-pressed {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #d6d6d6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c7c7c7), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -o-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: linear-gradient(top, #c7c7c7, #e0e0e0);
+}
+
+/* line 398, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-over .x-frame-tl,
+.x-btn-default-small-over .x-frame-bl,
+.x-btn-default-small-over .x-frame-tr,
+.x-btn-default-small-over .x-frame-br,
+.x-btn-default-small-over .x-frame-tc,
+.x-btn-default-small-over .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-small-over-corners.gif);
+}
+/* line 402, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-over .x-frame-ml,
+.x-btn-default-small-over .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-small-over-sides.gif);
+}
+/* line 405, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-over .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-small-over-fbg.gif);
+}
+
+/* line 420, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-focus .x-frame-tl,
+.x-btn-default-small-focus .x-frame-bl,
+.x-btn-default-small-focus .x-frame-tr,
+.x-btn-default-small-focus .x-frame-br,
+.x-btn-default-small-focus .x-frame-tc,
+.x-btn-default-small-focus .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-small-focus-corners.gif);
+}
+/* line 424, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-focus .x-frame-ml,
+.x-btn-default-small-focus .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-small-focus-sides.gif);
+}
+/* line 427, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-focus .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-small-focus-fbg.gif);
+}
+
+/* line 443, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-menu-active .x-frame-tl,
+.x-btn-default-small-menu-active .x-frame-bl,
+.x-btn-default-small-menu-active .x-frame-tr,
+.x-btn-default-small-menu-active .x-frame-br,
+.x-btn-default-small-menu-active .x-frame-tc,
+.x-btn-default-small-menu-active .x-frame-bc,
+.x-btn-default-small-pressed .x-frame-tl,
+.x-btn-default-small-pressed .x-frame-bl,
+.x-btn-default-small-pressed .x-frame-tr,
+.x-btn-default-small-pressed .x-frame-br,
+.x-btn-default-small-pressed .x-frame-tc,
+.x-btn-default-small-pressed .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-small-pressed-corners.gif);
+}
+/* line 447, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-menu-active .x-frame-ml,
+.x-btn-default-small-menu-active .x-frame-mr,
+.x-btn-default-small-pressed .x-frame-ml,
+.x-btn-default-small-pressed .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-small-pressed-sides.gif);
+}
+/* line 450, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-menu-active .x-frame-mc,
+.x-btn-default-small-pressed .x-frame-mc {
+  background-color: #d6d6d6;
+  background-image: url(../themes/images/gray/btn/btn-default-small-pressed-fbg.gif);
+}
+
+/* line 465, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-disabled .x-frame-tl,
+.x-btn-default-small-disabled .x-frame-bl,
+.x-btn-default-small-disabled .x-frame-tr,
+.x-btn-default-small-disabled .x-frame-br,
+.x-btn-default-small-disabled .x-frame-tc,
+.x-btn-default-small-disabled .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-small-disabled-corners.gif);
+}
+/* line 469, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-disabled .x-frame-ml,
+.x-btn-default-small-disabled .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-small-disabled-sides.gif);
+}
+/* line 472, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-disabled .x-frame-mc {
+  background-color: #ececec;
+  background-image: url(../themes/images/gray/btn/btn-default-small-disabled-fbg.gif);
+}
+
+/* line 484, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-small {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-small-bg.gif);
+}
+
+/* line 493, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-small-over {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-small-over-bg.gif);
+}
+
+/* line 502, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-small-focus {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-small-focus-bg.gif);
+}
+
+/* line 512, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-small-menu-active,
+.x-nlg .x-btn-default-small-pressed {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-small-pressed-bg.gif);
+}
+
+/* line 521, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-small-disabled {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-small-disabled-bg.gif);
+}
+
+/* line 541, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow.gif);
+  padding-right: 14px;
+}
+/* line 554, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-b.gif);
+  padding-bottom: 14px;
+}
+
+/* line 562, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-over .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-o.gif);
+}
+/* line 570, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-over .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-bo.gif);
+}
+
+/* line 585, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-small-disabled .x-btn-inner,
+.x-btn-default-small-disabled .x-btn-icon-el {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-small-over:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-small-over-corners.gif), sides:url(../themes/images/gray/btn/btn-default-small-over-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-small-over-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-small-over-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-small-focus:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-small-focus-corners.gif), sides:url(../themes/images/gray/btn/btn-default-small-focus-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-small-focus-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-small-focus-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-small-pressed:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-small-pressed-corners.gif), sides:url(../themes/images/gray/btn/btn-default-small-pressed-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-small-pressed-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-small-pressed-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-small-disabled:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-small-disabled-corners.gif), sides:url(../themes/images/gray/btn/btn-default-small-disabled-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-small-disabled-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-small-disabled-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 71, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium {
+  border-color: #bbbbbb;
+}
+
+/* line 143, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px 3px 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  background-image: none;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(top, #ffffff, #eeeeee);
+}
+
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-mc {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-fbg.gif);
+  background-position: 0 top;
+  background-color: #f8f8f8;
+}
+
+/* line 218, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nlg .x-btn-default-medium {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-bg.gif);
+  background-position: 0 top;
+}
+
+/* line 241, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nbr .x-btn-default-medium {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+/* line 260, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+body.x-nbr .x-btn-default-medium {
+  /* Pass along Div/Table, Horz/Vert, border-radius and border-width: */
+  background-image: url("about:blank#th-3-3-3-3-1-1-1-1-3-3-3-3");
+}
+
+/* line 315, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tl {
+  background-position: 0 -6px;
+}
+
+/* line 319, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tr {
+  background-position: right -9px;
+}
+
+/* line 323, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-bl {
+  background-position: 0 -12px;
+}
+
+/* line 327, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-br {
+  background-position: right -15px;
+}
+
+/* line 331, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-ml {
+  background-position: 0 top;
+}
+
+/* line 335, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-mr {
+  background-position: right top;
+}
+
+/* line 339, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tc {
+  background-position: 0 0;
+}
+
+/* line 343, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-bc {
+  background-position: 0 -3px;
+}
+
+/* line 350, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tr,
+.x-btn-default-medium-br,
+.x-btn-default-medium-mr {
+  padding-right: 3px;
+}
+
+/* line 356, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tl,
+.x-btn-default-medium-bl,
+.x-btn-default-medium-ml {
+  padding-left: 3px;
+}
+
+/* line 360, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tc {
+  height: 3px;
+}
+
+/* line 363, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-bc {
+  height: 3px;
+}
+
+/* line 374, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-tl,
+.x-btn-default-medium-bl,
+.x-btn-default-medium-tr,
+.x-btn-default-medium-br,
+.x-btn-default-medium-tc,
+.x-btn-default-medium-bc,
+.x-btn-default-medium-ml,
+.x-btn-default-medium-mr {
+  zoom: 1;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-corners.gif);
+}
+
+/* line 418, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-ml,
+.x-btn-default-medium-mr {
+  zoom: 1;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-sides.gif);
+}
+
+/* line 430, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-medium-mc {
+  padding: 1px 1px 1px 1px;
+}
+
+/* line 439, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-strict .x-ie7 .x-btn-default-medium-tl,
+.x-strict .x-ie7 .x-btn-default-medium-bl {
+  position: relative;
+  right: 0;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-medium:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, frame-bg:url(../themes/images/gray/btn/btn-default-medium-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-medium-bg.gif), corners:url(../themes/images/gray/btn/btn-default-medium-corners.gif), sides:url(../themes/images/gray/btn/btn-default-medium-sides.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-inner {
+  font-size: 11px;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  color: #333333;
+  padding: 0 3px;
+}
+/* line 86, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-arrow {
+  background-image: url(../themes/images/gray/button/arrow.gif);
+}
+/* line 94, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-arrow-right {
+  padding-right: 12px;
+}
+/* line 105, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-arrow-bottom {
+  padding-bottom: 12px;
+}
+/* line 109, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-glyph {
+  font-size: 24px;
+  line-height: 24px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 128, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie8m .x-btn-default-medium .x-btn-glyph {
+  color: #959595;
+}
+
+/* line 134, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-disabled {
+  border-color: #d7d7d7;
+  background-image: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f4f4), color-stop(100%, #e2e2e2));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: linear-gradient(top, #f4f4f4, #e2e2e2);
+}
+
+/* line 160, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon .x-btn-button,
+.x-btn-default-medium-noicon .x-btn-button {
+  height: 24px;
+}
+/* line 164, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon .x-btn-inner,
+.x-btn-default-medium-noicon .x-btn-inner {
+  line-height: 24px;
+}
+
+/* line 174, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-medium-noicon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-medium-icon-text-left .x-btn-arrow-right .x-btn-inner {
+  padding-right: 0;
+}
+
+/* line 189, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon .x-btn-inner {
+  width: 24px;
+  padding: 0;
+}
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon .x-btn-icon-el {
+  width: 24px;
+  height: 24px;
+}
+
+/* line 202, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-left .x-btn-button {
+  height: 24px;
+}
+/* line 207, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-left .x-btn-inner {
+  line-height: 24px;
+  padding-left: 28px;
+}
+/* line 223, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-left .x-btn-icon-el {
+  width: 24px;
+  right: auto;
+}
+/* line 228, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-medium-icon-text-left .x-btn-icon-el, .x-quirks .x-btn-default-medium-icon-text-left .x-btn-icon-el {
+  height: 24px;
+}
+
+/* line 242, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-right .x-btn-button {
+  height: 24px;
+}
+/* line 247, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-right .x-btn-inner {
+  line-height: 24px;
+  padding-right: 28px;
+}
+/* line 259, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-right .x-btn-icon-el {
+  width: 24px;
+  left: auto;
+}
+/* line 264, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-medium-icon-text-right .x-btn-icon-el, .x-quirks .x-btn-default-medium-icon-text-right .x-btn-icon-el {
+  height: 24px;
+}
+
+/* line 278, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-top .x-btn-inner {
+  padding-top: 28px;
+}
+/* line 282, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-top .x-btn-icon-el {
+  height: 24px;
+  bottom: auto;
+}
+/* line 290, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-medium-icon-text-top .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-medium-icon-text-top .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 298, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-bottom .x-btn-inner {
+  padding-bottom: 28px;
+}
+/* line 302, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-icon-text-bottom .x-btn-icon-el {
+  height: 24px;
+  top: auto;
+}
+/* line 310, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-medium-icon-text-bottom .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-medium-icon-text-bottom .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 317, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-over {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -o-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: linear-gradient(top, #fbfbfb, #e9e9e9);
+}
+
+/* line 341, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-focus {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -o-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: linear-gradient(top, #fbfbfb, #e9e9e9);
+}
+
+/* line 366, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-menu-active,
+.x-btn-default-medium-pressed {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #d6d6d6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c7c7c7), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -o-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: linear-gradient(top, #c7c7c7, #e0e0e0);
+}
+
+/* line 398, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-over .x-frame-tl,
+.x-btn-default-medium-over .x-frame-bl,
+.x-btn-default-medium-over .x-frame-tr,
+.x-btn-default-medium-over .x-frame-br,
+.x-btn-default-medium-over .x-frame-tc,
+.x-btn-default-medium-over .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-over-corners.gif);
+}
+/* line 402, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-over .x-frame-ml,
+.x-btn-default-medium-over .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-over-sides.gif);
+}
+/* line 405, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-over .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-over-fbg.gif);
+}
+
+/* line 420, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-focus .x-frame-tl,
+.x-btn-default-medium-focus .x-frame-bl,
+.x-btn-default-medium-focus .x-frame-tr,
+.x-btn-default-medium-focus .x-frame-br,
+.x-btn-default-medium-focus .x-frame-tc,
+.x-btn-default-medium-focus .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-focus-corners.gif);
+}
+/* line 424, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-focus .x-frame-ml,
+.x-btn-default-medium-focus .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-focus-sides.gif);
+}
+/* line 427, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-focus .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-focus-fbg.gif);
+}
+
+/* line 443, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-menu-active .x-frame-tl,
+.x-btn-default-medium-menu-active .x-frame-bl,
+.x-btn-default-medium-menu-active .x-frame-tr,
+.x-btn-default-medium-menu-active .x-frame-br,
+.x-btn-default-medium-menu-active .x-frame-tc,
+.x-btn-default-medium-menu-active .x-frame-bc,
+.x-btn-default-medium-pressed .x-frame-tl,
+.x-btn-default-medium-pressed .x-frame-bl,
+.x-btn-default-medium-pressed .x-frame-tr,
+.x-btn-default-medium-pressed .x-frame-br,
+.x-btn-default-medium-pressed .x-frame-tc,
+.x-btn-default-medium-pressed .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-pressed-corners.gif);
+}
+/* line 447, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-menu-active .x-frame-ml,
+.x-btn-default-medium-menu-active .x-frame-mr,
+.x-btn-default-medium-pressed .x-frame-ml,
+.x-btn-default-medium-pressed .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-pressed-sides.gif);
+}
+/* line 450, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-menu-active .x-frame-mc,
+.x-btn-default-medium-pressed .x-frame-mc {
+  background-color: #d6d6d6;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-pressed-fbg.gif);
+}
+
+/* line 465, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-disabled .x-frame-tl,
+.x-btn-default-medium-disabled .x-frame-bl,
+.x-btn-default-medium-disabled .x-frame-tr,
+.x-btn-default-medium-disabled .x-frame-br,
+.x-btn-default-medium-disabled .x-frame-tc,
+.x-btn-default-medium-disabled .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-disabled-corners.gif);
+}
+/* line 469, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-disabled .x-frame-ml,
+.x-btn-default-medium-disabled .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-medium-disabled-sides.gif);
+}
+/* line 472, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-disabled .x-frame-mc {
+  background-color: #ececec;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-disabled-fbg.gif);
+}
+
+/* line 484, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-medium {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-bg.gif);
+}
+
+/* line 493, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-medium-over {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-over-bg.gif);
+}
+
+/* line 502, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-medium-focus {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-focus-bg.gif);
+}
+
+/* line 512, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-medium-menu-active,
+.x-nlg .x-btn-default-medium-pressed {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-pressed-bg.gif);
+}
+
+/* line 521, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-medium-disabled {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-medium-disabled-bg.gif);
+}
+
+/* line 541, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow.gif);
+  padding-right: 14px;
+}
+/* line 554, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-b.gif);
+  padding-bottom: 14px;
+}
+
+/* line 562, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-over .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-o.gif);
+}
+/* line 570, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-over .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-bo.gif);
+}
+
+/* line 585, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-medium-disabled .x-btn-inner,
+.x-btn-default-medium-disabled .x-btn-icon-el {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-medium-over:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-medium-over-corners.gif), sides:url(../themes/images/gray/btn/btn-default-medium-over-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-medium-over-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-medium-over-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-medium-focus:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-medium-focus-corners.gif), sides:url(../themes/images/gray/btn/btn-default-medium-focus-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-medium-focus-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-medium-focus-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-medium-pressed:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-medium-pressed-corners.gif), sides:url(../themes/images/gray/btn/btn-default-medium-pressed-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-medium-pressed-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-medium-pressed-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-medium-disabled:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-medium-disabled-corners.gif), sides:url(../themes/images/gray/btn/btn-default-medium-disabled-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-medium-disabled-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-medium-disabled-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 71, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large {
+  border-color: #bbbbbb;
+}
+
+/* line 143, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px 3px 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  background-image: none;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(top, #ffffff, #eeeeee);
+}
+
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-mc {
+  background-image: url(../themes/images/gray/btn/btn-default-large-fbg.gif);
+  background-position: 0 top;
+  background-color: #f8f8f8;
+}
+
+/* line 218, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nlg .x-btn-default-large {
+  background-image: url(../themes/images/gray/btn/btn-default-large-bg.gif);
+  background-position: 0 top;
+}
+
+/* line 241, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nbr .x-btn-default-large {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+/* line 260, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+body.x-nbr .x-btn-default-large {
+  /* Pass along Div/Table, Horz/Vert, border-radius and border-width: */
+  background-image: url("about:blank#th-3-3-3-3-1-1-1-1-3-3-3-3");
+}
+
+/* line 315, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tl {
+  background-position: 0 -6px;
+}
+
+/* line 319, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tr {
+  background-position: right -9px;
+}
+
+/* line 323, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-bl {
+  background-position: 0 -12px;
+}
+
+/* line 327, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-br {
+  background-position: right -15px;
+}
+
+/* line 331, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-ml {
+  background-position: 0 top;
+}
+
+/* line 335, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-mr {
+  background-position: right top;
+}
+
+/* line 339, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tc {
+  background-position: 0 0;
+}
+
+/* line 343, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-bc {
+  background-position: 0 -3px;
+}
+
+/* line 350, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tr,
+.x-btn-default-large-br,
+.x-btn-default-large-mr {
+  padding-right: 3px;
+}
+
+/* line 356, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tl,
+.x-btn-default-large-bl,
+.x-btn-default-large-ml {
+  padding-left: 3px;
+}
+
+/* line 360, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tc {
+  height: 3px;
+}
+
+/* line 363, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-bc {
+  height: 3px;
+}
+
+/* line 374, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-tl,
+.x-btn-default-large-bl,
+.x-btn-default-large-tr,
+.x-btn-default-large-br,
+.x-btn-default-large-tc,
+.x-btn-default-large-bc,
+.x-btn-default-large-ml,
+.x-btn-default-large-mr {
+  zoom: 1;
+  background-image: url(../themes/images/gray/btn/btn-default-large-corners.gif);
+}
+
+/* line 418, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-ml,
+.x-btn-default-large-mr {
+  zoom: 1;
+  background-image: url(../themes/images/gray/btn/btn-default-large-sides.gif);
+}
+
+/* line 430, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-large-mc {
+  padding: 1px 1px 1px 1px;
+}
+
+/* line 439, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-strict .x-ie7 .x-btn-default-large-tl,
+.x-strict .x-ie7 .x-btn-default-large-bl {
+  position: relative;
+  right: 0;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-large:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, frame-bg:url(../themes/images/gray/btn/btn-default-large-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-large-bg.gif), corners:url(../themes/images/gray/btn/btn-default-large-corners.gif), sides:url(../themes/images/gray/btn/btn-default-large-sides.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-inner {
+  font-size: 11px;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  color: #333333;
+  padding: 0 3px;
+}
+/* line 86, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-arrow {
+  background-image: url(../themes/images/gray/button/arrow.gif);
+}
+/* line 94, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-arrow-right {
+  padding-right: 12px;
+}
+/* line 105, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-arrow-bottom {
+  padding-bottom: 12px;
+}
+/* line 109, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-glyph {
+  font-size: 32px;
+  line-height: 32px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 128, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie8m .x-btn-default-large .x-btn-glyph {
+  color: #959595;
+}
+
+/* line 134, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-disabled {
+  border-color: #d7d7d7;
+  background-image: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f4f4), color-stop(100%, #e2e2e2));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e2e2e2);
+  background-image: linear-gradient(top, #f4f4f4, #e2e2e2);
+}
+
+/* line 160, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon .x-btn-button,
+.x-btn-default-large-noicon .x-btn-button {
+  height: 32px;
+}
+/* line 164, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon .x-btn-inner,
+.x-btn-default-large-noicon .x-btn-inner {
+  line-height: 32px;
+}
+
+/* line 174, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-large-noicon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-large-icon-text-left .x-btn-arrow-right .x-btn-inner {
+  padding-right: 0;
+}
+
+/* line 189, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon .x-btn-inner {
+  width: 32px;
+  padding: 0;
+}
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon .x-btn-icon-el {
+  width: 32px;
+  height: 32px;
+}
+
+/* line 202, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-left .x-btn-button {
+  height: 32px;
+}
+/* line 207, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-left .x-btn-inner {
+  line-height: 32px;
+  padding-left: 36px;
+}
+/* line 223, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-left .x-btn-icon-el {
+  width: 32px;
+  right: auto;
+}
+/* line 228, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-large-icon-text-left .x-btn-icon-el, .x-quirks .x-btn-default-large-icon-text-left .x-btn-icon-el {
+  height: 32px;
+}
+
+/* line 242, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-right .x-btn-button {
+  height: 32px;
+}
+/* line 247, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-right .x-btn-inner {
+  line-height: 32px;
+  padding-right: 36px;
+}
+/* line 259, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-right .x-btn-icon-el {
+  width: 32px;
+  left: auto;
+}
+/* line 264, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-large-icon-text-right .x-btn-icon-el, .x-quirks .x-btn-default-large-icon-text-right .x-btn-icon-el {
+  height: 32px;
+}
+
+/* line 278, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-top .x-btn-inner {
+  padding-top: 36px;
+}
+/* line 282, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-top .x-btn-icon-el {
+  height: 32px;
+  bottom: auto;
+}
+/* line 290, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-large-icon-text-top .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-large-icon-text-top .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 298, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-bottom .x-btn-inner {
+  padding-bottom: 36px;
+}
+/* line 302, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-icon-text-bottom .x-btn-icon-el {
+  height: 32px;
+  top: auto;
+}
+/* line 310, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-large-icon-text-bottom .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-large-icon-text-bottom .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 317, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-over {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -o-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: linear-gradient(top, #fbfbfb, #e9e9e9);
+}
+
+/* line 341, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-focus {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -o-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #e9e9e9);
+  background-image: linear-gradient(top, #fbfbfb, #e9e9e9);
+}
+
+/* line 366, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-menu-active,
+.x-btn-default-large-pressed {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #d6d6d6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c7c7c7), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -o-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #c7c7c7, #e0e0e0);
+  background-image: linear-gradient(top, #c7c7c7, #e0e0e0);
+}
+
+/* line 398, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-over .x-frame-tl,
+.x-btn-default-large-over .x-frame-bl,
+.x-btn-default-large-over .x-frame-tr,
+.x-btn-default-large-over .x-frame-br,
+.x-btn-default-large-over .x-frame-tc,
+.x-btn-default-large-over .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-large-over-corners.gif);
+}
+/* line 402, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-over .x-frame-ml,
+.x-btn-default-large-over .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-large-over-sides.gif);
+}
+/* line 405, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-over .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-large-over-fbg.gif);
+}
+
+/* line 420, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-focus .x-frame-tl,
+.x-btn-default-large-focus .x-frame-bl,
+.x-btn-default-large-focus .x-frame-tr,
+.x-btn-default-large-focus .x-frame-br,
+.x-btn-default-large-focus .x-frame-tc,
+.x-btn-default-large-focus .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-large-focus-corners.gif);
+}
+/* line 424, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-focus .x-frame-ml,
+.x-btn-default-large-focus .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-large-focus-sides.gif);
+}
+/* line 427, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-focus .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-large-focus-fbg.gif);
+}
+
+/* line 443, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-menu-active .x-frame-tl,
+.x-btn-default-large-menu-active .x-frame-bl,
+.x-btn-default-large-menu-active .x-frame-tr,
+.x-btn-default-large-menu-active .x-frame-br,
+.x-btn-default-large-menu-active .x-frame-tc,
+.x-btn-default-large-menu-active .x-frame-bc,
+.x-btn-default-large-pressed .x-frame-tl,
+.x-btn-default-large-pressed .x-frame-bl,
+.x-btn-default-large-pressed .x-frame-tr,
+.x-btn-default-large-pressed .x-frame-br,
+.x-btn-default-large-pressed .x-frame-tc,
+.x-btn-default-large-pressed .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-large-pressed-corners.gif);
+}
+/* line 447, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-menu-active .x-frame-ml,
+.x-btn-default-large-menu-active .x-frame-mr,
+.x-btn-default-large-pressed .x-frame-ml,
+.x-btn-default-large-pressed .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-large-pressed-sides.gif);
+}
+/* line 450, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-menu-active .x-frame-mc,
+.x-btn-default-large-pressed .x-frame-mc {
+  background-color: #d6d6d6;
+  background-image: url(../themes/images/gray/btn/btn-default-large-pressed-fbg.gif);
+}
+
+/* line 465, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-disabled .x-frame-tl,
+.x-btn-default-large-disabled .x-frame-bl,
+.x-btn-default-large-disabled .x-frame-tr,
+.x-btn-default-large-disabled .x-frame-br,
+.x-btn-default-large-disabled .x-frame-tc,
+.x-btn-default-large-disabled .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-large-disabled-corners.gif);
+}
+/* line 469, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-disabled .x-frame-ml,
+.x-btn-default-large-disabled .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-large-disabled-sides.gif);
+}
+/* line 472, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-disabled .x-frame-mc {
+  background-color: #ececec;
+  background-image: url(../themes/images/gray/btn/btn-default-large-disabled-fbg.gif);
+}
+
+/* line 484, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-large {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-large-bg.gif);
+}
+
+/* line 493, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-large-over {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-large-over-bg.gif);
+}
+
+/* line 502, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-large-focus {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-large-focus-bg.gif);
+}
+
+/* line 512, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-large-menu-active,
+.x-nlg .x-btn-default-large-pressed {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-large-pressed-bg.gif);
+}
+
+/* line 521, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-large-disabled {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-large-disabled-bg.gif);
+}
+
+/* line 541, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow.gif);
+  padding-right: 14px;
+}
+/* line 554, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-b.gif);
+  padding-bottom: 14px;
+}
+
+/* line 562, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-over .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-o.gif);
+}
+/* line 570, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-over .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-bo.gif);
+}
+
+/* line 585, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-large-disabled .x-btn-inner,
+.x-btn-default-large-disabled .x-btn-icon-el {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-large-over:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-large-over-corners.gif), sides:url(../themes/images/gray/btn/btn-default-large-over-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-large-over-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-large-over-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-large-focus:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-large-focus-corners.gif), sides:url(../themes/images/gray/btn/btn-default-large-focus-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-large-focus-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-large-focus-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-large-pressed:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-large-pressed-corners.gif), sides:url(../themes/images/gray/btn/btn-default-large-pressed-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-large-pressed-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-large-pressed-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-large-disabled:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-large-disabled-corners.gif), sides:url(../themes/images/gray/btn/btn-default-large-disabled-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-large-disabled-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-large-disabled-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 71, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small {
+  border-color: transparent;
+}
+
+/* line 143, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 2px 2px 2px 2px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-mc {
+  background-color: transparent;
+}
+
+/* line 241, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nbr .x-btn-default-toolbar-small {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+/* line 260, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+body.x-nbr .x-btn-default-toolbar-small {
+  /* Pass along Div/Table, Horz/Vert, border-radius and border-width: */
+  background-image: url("about:blank#th-3-3-3-3-1-1-1-1-2-2-2-2");
+}
+
+/* line 315, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tl {
+  background-position: 0 -6px;
+}
+
+/* line 319, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tr {
+  background-position: right -9px;
+}
+
+/* line 323, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-bl {
+  background-position: 0 -12px;
+}
+
+/* line 327, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-br {
+  background-position: right -15px;
+}
+
+/* line 331, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-ml {
+  background-position: 0 top;
+}
+
+/* line 335, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-mr {
+  background-position: right top;
+}
+
+/* line 339, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tc {
+  background-position: 0 0;
+}
+
+/* line 343, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-bc {
+  background-position: 0 -3px;
+}
+
+/* line 350, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tr,
+.x-btn-default-toolbar-small-br,
+.x-btn-default-toolbar-small-mr {
+  padding-right: 3px;
+}
+
+/* line 356, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tl,
+.x-btn-default-toolbar-small-bl,
+.x-btn-default-toolbar-small-ml {
+  padding-left: 3px;
+}
+
+/* line 360, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tc {
+  height: 3px;
+}
+
+/* line 363, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-bc {
+  height: 3px;
+}
+
+/* line 374, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-tl,
+.x-btn-default-toolbar-small-bl,
+.x-btn-default-toolbar-small-tr,
+.x-btn-default-toolbar-small-br,
+.x-btn-default-toolbar-small-tc,
+.x-btn-default-toolbar-small-bc,
+.x-btn-default-toolbar-small-ml,
+.x-btn-default-toolbar-small-mr {
+  zoom: 1;
+}
+
+/* line 418, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-ml,
+.x-btn-default-toolbar-small-mr {
+  zoom: 1;
+}
+
+/* line 430, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-small-mc {
+  padding: 0px 0px 0px 0px;
+}
+
+/* line 439, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-strict .x-ie7 .x-btn-default-toolbar-small-tl,
+.x-strict .x-ie7 .x-btn-default-toolbar-small-bl {
+  position: relative;
+  right: 0;
+}
+
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-inner {
+  font-size: 11px;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  color: #333333;
+  padding: 0 4px;
+}
+/* line 86, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-arrow {
+  background-image: url(../themes/images/gray/button/arrow.gif);
+}
+/* line 94, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-arrow-right {
+  padding-right: 12px;
+}
+/* line 105, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-arrow-bottom {
+  padding-bottom: 12px;
+}
+/* line 109, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-glyph {
+  font-size: 16px;
+  line-height: 16px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 128, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie8m .x-btn-default-toolbar-small .x-btn-glyph {
+  color: #999999;
+}
+
+/* line 134, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-disabled {
+  border-color: #d7d7d7;
+  background-image: none;
+  background-color: transparent;
+}
+/* line 142, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-disabled .x-btn-inner {
+  color: #8c8c8c;
+}
+
+/* line 160, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon .x-btn-button,
+.x-btn-default-toolbar-small-noicon .x-btn-button {
+  height: 16px;
+}
+/* line 164, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon .x-btn-inner,
+.x-btn-default-toolbar-small-noicon .x-btn-inner {
+  line-height: 16px;
+}
+
+/* line 174, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-toolbar-small-noicon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-toolbar-small-icon-text-left .x-btn-arrow-right .x-btn-inner {
+  padding-right: 0;
+}
+
+/* line 189, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon .x-btn-inner {
+  width: 16px;
+  padding: 0;
+}
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon .x-btn-icon-el {
+  width: 16px;
+  height: 16px;
+}
+
+/* line 202, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-left .x-btn-button {
+  height: 16px;
+}
+/* line 207, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-left .x-btn-inner {
+  line-height: 16px;
+  padding-left: 20px;
+}
+/* line 223, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-left .x-btn-icon-el {
+  width: 16px;
+  right: auto;
+}
+/* line 228, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-small-icon-text-left .x-btn-icon-el, .x-quirks .x-btn-default-toolbar-small-icon-text-left .x-btn-icon-el {
+  height: 16px;
+}
+
+/* line 242, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-right .x-btn-button {
+  height: 16px;
+}
+/* line 247, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-right .x-btn-inner {
+  line-height: 16px;
+  padding-right: 20px;
+}
+/* line 259, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-right .x-btn-icon-el {
+  width: 16px;
+  left: auto;
+}
+/* line 264, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-small-icon-text-right .x-btn-icon-el, .x-quirks .x-btn-default-toolbar-small-icon-text-right .x-btn-icon-el {
+  height: 16px;
+}
+
+/* line 278, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-top .x-btn-inner {
+  padding-top: 20px;
+}
+/* line 282, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-top .x-btn-icon-el {
+  height: 16px;
+  bottom: auto;
+}
+/* line 290, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-small-icon-text-top .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-toolbar-small-icon-text-top .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 298, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-bottom .x-btn-inner {
+  padding-bottom: 20px;
+}
+/* line 302, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-icon-text-bottom .x-btn-icon-el {
+  height: 16px;
+  top: auto;
+}
+/* line 310, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-small-icon-text-bottom .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-toolbar-small-icon-text-bottom .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 317, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-over {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f3), color-stop(48%, #ededed), color-stop(52%, #dbdbdb), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -o-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+}
+
+/* line 341, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-focus {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f3), color-stop(48%, #ededed), color-stop(52%, #dbdbdb), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -o-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+}
+
+/* line 366, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-menu-active,
+.x-btn-default-toolbar-small-pressed {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #d6d6d6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d6d6d6), color-stop(48%, #dcdcdc), color-stop(52%, #deb6b7), color-stop(100%, #e1bebf));
+  background-image: -webkit-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -moz-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -o-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -ms-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+}
+
+/* line 398, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-over .x-frame-tl,
+.x-btn-default-toolbar-small-over .x-frame-bl,
+.x-btn-default-toolbar-small-over .x-frame-tr,
+.x-btn-default-toolbar-small-over .x-frame-br,
+.x-btn-default-toolbar-small-over .x-frame-tc,
+.x-btn-default-toolbar-small-over .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-over-corners.gif);
+}
+/* line 402, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-over .x-frame-ml,
+.x-btn-default-toolbar-small-over .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-over-sides.gif);
+}
+/* line 405, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-over .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-over-fbg.gif);
+}
+
+/* line 420, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-focus .x-frame-tl,
+.x-btn-default-toolbar-small-focus .x-frame-bl,
+.x-btn-default-toolbar-small-focus .x-frame-tr,
+.x-btn-default-toolbar-small-focus .x-frame-br,
+.x-btn-default-toolbar-small-focus .x-frame-tc,
+.x-btn-default-toolbar-small-focus .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-focus-corners.gif);
+}
+/* line 424, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-focus .x-frame-ml,
+.x-btn-default-toolbar-small-focus .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-focus-sides.gif);
+}
+/* line 427, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-focus .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-focus-fbg.gif);
+}
+
+/* line 443, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-menu-active .x-frame-tl,
+.x-btn-default-toolbar-small-menu-active .x-frame-bl,
+.x-btn-default-toolbar-small-menu-active .x-frame-tr,
+.x-btn-default-toolbar-small-menu-active .x-frame-br,
+.x-btn-default-toolbar-small-menu-active .x-frame-tc,
+.x-btn-default-toolbar-small-menu-active .x-frame-bc,
+.x-btn-default-toolbar-small-pressed .x-frame-tl,
+.x-btn-default-toolbar-small-pressed .x-frame-bl,
+.x-btn-default-toolbar-small-pressed .x-frame-tr,
+.x-btn-default-toolbar-small-pressed .x-frame-br,
+.x-btn-default-toolbar-small-pressed .x-frame-tc,
+.x-btn-default-toolbar-small-pressed .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-corners.gif);
+}
+/* line 447, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-menu-active .x-frame-ml,
+.x-btn-default-toolbar-small-menu-active .x-frame-mr,
+.x-btn-default-toolbar-small-pressed .x-frame-ml,
+.x-btn-default-toolbar-small-pressed .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-sides.gif);
+}
+/* line 450, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-menu-active .x-frame-mc,
+.x-btn-default-toolbar-small-pressed .x-frame-mc {
+  background-color: #d6d6d6;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-fbg.gif);
+}
+
+/* line 465, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-disabled .x-frame-tl,
+.x-btn-default-toolbar-small-disabled .x-frame-bl,
+.x-btn-default-toolbar-small-disabled .x-frame-tr,
+.x-btn-default-toolbar-small-disabled .x-frame-br,
+.x-btn-default-toolbar-small-disabled .x-frame-tc,
+.x-btn-default-toolbar-small-disabled .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-disabled-corners.gif);
+}
+/* line 469, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-disabled .x-frame-ml,
+.x-btn-default-toolbar-small-disabled .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-disabled-sides.gif);
+}
+/* line 472, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-disabled .x-frame-mc {
+  background-color: transparent;
+}
+
+/* line 493, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-small-over {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-over-bg.gif);
+}
+
+/* line 502, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-small-focus {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-focus-bg.gif);
+}
+
+/* line 512, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-small-menu-active,
+.x-nlg .x-btn-default-toolbar-small-pressed {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-bg.gif);
+}
+
+/* line 541, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-noline.gif);
+  padding-right: 14px;
+}
+/* line 554, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-b-noline.gif);
+  padding-bottom: 14px;
+}
+
+/* line 562, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-over .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-o.gif);
+}
+/* line 570, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-over .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-bo.gif);
+}
+
+/* line 577, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-small-disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-small-over:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-small-over-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-small-over-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-small-over-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-small-over-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-small-focus:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-small-focus-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-small-focus-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-small-focus-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-small-focus-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-small-pressed:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-small-pressed-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-small-disabled:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-small-disabled-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-small-disabled-sides.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 71, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium {
+  border-color: transparent;
+}
+
+/* line 143, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px 3px 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-mc {
+  background-color: transparent;
+}
+
+/* line 241, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nbr .x-btn-default-toolbar-medium {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+/* line 260, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+body.x-nbr .x-btn-default-toolbar-medium {
+  /* Pass along Div/Table, Horz/Vert, border-radius and border-width: */
+  background-image: url("about:blank#th-3-3-3-3-1-1-1-1-3-3-3-3");
+}
+
+/* line 315, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tl {
+  background-position: 0 -6px;
+}
+
+/* line 319, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tr {
+  background-position: right -9px;
+}
+
+/* line 323, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-bl {
+  background-position: 0 -12px;
+}
+
+/* line 327, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-br {
+  background-position: right -15px;
+}
+
+/* line 331, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-ml {
+  background-position: 0 top;
+}
+
+/* line 335, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-mr {
+  background-position: right top;
+}
+
+/* line 339, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tc {
+  background-position: 0 0;
+}
+
+/* line 343, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-bc {
+  background-position: 0 -3px;
+}
+
+/* line 350, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tr,
+.x-btn-default-toolbar-medium-br,
+.x-btn-default-toolbar-medium-mr {
+  padding-right: 3px;
+}
+
+/* line 356, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tl,
+.x-btn-default-toolbar-medium-bl,
+.x-btn-default-toolbar-medium-ml {
+  padding-left: 3px;
+}
+
+/* line 360, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tc {
+  height: 3px;
+}
+
+/* line 363, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-bc {
+  height: 3px;
+}
+
+/* line 374, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-tl,
+.x-btn-default-toolbar-medium-bl,
+.x-btn-default-toolbar-medium-tr,
+.x-btn-default-toolbar-medium-br,
+.x-btn-default-toolbar-medium-tc,
+.x-btn-default-toolbar-medium-bc,
+.x-btn-default-toolbar-medium-ml,
+.x-btn-default-toolbar-medium-mr {
+  zoom: 1;
+}
+
+/* line 418, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-ml,
+.x-btn-default-toolbar-medium-mr {
+  zoom: 1;
+}
+
+/* line 430, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-medium-mc {
+  padding: 1px 1px 1px 1px;
+}
+
+/* line 439, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-strict .x-ie7 .x-btn-default-toolbar-medium-tl,
+.x-strict .x-ie7 .x-btn-default-toolbar-medium-bl {
+  position: relative;
+  right: 0;
+}
+
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-inner {
+  font-size: 11px;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  color: #333333;
+  padding: 0 3px;
+}
+/* line 86, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-arrow {
+  background-image: url(../themes/images/gray/button/arrow.gif);
+}
+/* line 94, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-arrow-right {
+  padding-right: 12px;
+}
+/* line 105, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-arrow-bottom {
+  padding-bottom: 12px;
+}
+/* line 109, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-glyph {
+  font-size: 24px;
+  line-height: 24px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 128, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie8m .x-btn-default-toolbar-medium .x-btn-glyph {
+  color: #999999;
+}
+
+/* line 134, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-disabled {
+  border-color: #d7d7d7;
+  background-image: none;
+  background-color: transparent;
+}
+/* line 142, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-disabled .x-btn-inner {
+  color: #8c8c8c;
+}
+
+/* line 160, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon .x-btn-button,
+.x-btn-default-toolbar-medium-noicon .x-btn-button {
+  height: 24px;
+}
+/* line 164, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon .x-btn-inner,
+.x-btn-default-toolbar-medium-noicon .x-btn-inner {
+  line-height: 24px;
+}
+
+/* line 174, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-toolbar-medium-noicon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-toolbar-medium-icon-text-left .x-btn-arrow-right .x-btn-inner {
+  padding-right: 0;
+}
+
+/* line 189, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon .x-btn-inner {
+  width: 24px;
+  padding: 0;
+}
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon .x-btn-icon-el {
+  width: 24px;
+  height: 24px;
+}
+
+/* line 202, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-left .x-btn-button {
+  height: 24px;
+}
+/* line 207, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-left .x-btn-inner {
+  line-height: 24px;
+  padding-left: 28px;
+}
+/* line 223, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-left .x-btn-icon-el {
+  width: 24px;
+  right: auto;
+}
+/* line 228, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-medium-icon-text-left .x-btn-icon-el, .x-quirks .x-btn-default-toolbar-medium-icon-text-left .x-btn-icon-el {
+  height: 24px;
+}
+
+/* line 242, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-right .x-btn-button {
+  height: 24px;
+}
+/* line 247, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-right .x-btn-inner {
+  line-height: 24px;
+  padding-right: 28px;
+}
+/* line 259, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-right .x-btn-icon-el {
+  width: 24px;
+  left: auto;
+}
+/* line 264, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-medium-icon-text-right .x-btn-icon-el, .x-quirks .x-btn-default-toolbar-medium-icon-text-right .x-btn-icon-el {
+  height: 24px;
+}
+
+/* line 278, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-top .x-btn-inner {
+  padding-top: 28px;
+}
+/* line 282, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-top .x-btn-icon-el {
+  height: 24px;
+  bottom: auto;
+}
+/* line 290, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-medium-icon-text-top .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-toolbar-medium-icon-text-top .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 298, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-bottom .x-btn-inner {
+  padding-bottom: 28px;
+}
+/* line 302, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-icon-text-bottom .x-btn-icon-el {
+  height: 24px;
+  top: auto;
+}
+/* line 310, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-medium-icon-text-bottom .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-toolbar-medium-icon-text-bottom .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 317, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-over {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f3), color-stop(48%, #ededed), color-stop(52%, #dbdbdb), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -o-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+}
+
+/* line 341, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-focus {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f3), color-stop(48%, #ededed), color-stop(52%, #dbdbdb), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -o-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+}
+
+/* line 366, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-menu-active,
+.x-btn-default-toolbar-medium-pressed {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #d6d6d6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d6d6d6), color-stop(48%, #dcdcdc), color-stop(52%, #deb6b7), color-stop(100%, #e1bebf));
+  background-image: -webkit-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -moz-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -o-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -ms-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+}
+
+/* line 398, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-over .x-frame-tl,
+.x-btn-default-toolbar-medium-over .x-frame-bl,
+.x-btn-default-toolbar-medium-over .x-frame-tr,
+.x-btn-default-toolbar-medium-over .x-frame-br,
+.x-btn-default-toolbar-medium-over .x-frame-tc,
+.x-btn-default-toolbar-medium-over .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-over-corners.gif);
+}
+/* line 402, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-over .x-frame-ml,
+.x-btn-default-toolbar-medium-over .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-over-sides.gif);
+}
+/* line 405, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-over .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-over-fbg.gif);
+}
+
+/* line 420, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-focus .x-frame-tl,
+.x-btn-default-toolbar-medium-focus .x-frame-bl,
+.x-btn-default-toolbar-medium-focus .x-frame-tr,
+.x-btn-default-toolbar-medium-focus .x-frame-br,
+.x-btn-default-toolbar-medium-focus .x-frame-tc,
+.x-btn-default-toolbar-medium-focus .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-corners.gif);
+}
+/* line 424, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-focus .x-frame-ml,
+.x-btn-default-toolbar-medium-focus .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-sides.gif);
+}
+/* line 427, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-focus .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-fbg.gif);
+}
+
+/* line 443, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-menu-active .x-frame-tl,
+.x-btn-default-toolbar-medium-menu-active .x-frame-bl,
+.x-btn-default-toolbar-medium-menu-active .x-frame-tr,
+.x-btn-default-toolbar-medium-menu-active .x-frame-br,
+.x-btn-default-toolbar-medium-menu-active .x-frame-tc,
+.x-btn-default-toolbar-medium-menu-active .x-frame-bc,
+.x-btn-default-toolbar-medium-pressed .x-frame-tl,
+.x-btn-default-toolbar-medium-pressed .x-frame-bl,
+.x-btn-default-toolbar-medium-pressed .x-frame-tr,
+.x-btn-default-toolbar-medium-pressed .x-frame-br,
+.x-btn-default-toolbar-medium-pressed .x-frame-tc,
+.x-btn-default-toolbar-medium-pressed .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-corners.gif);
+}
+/* line 447, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-menu-active .x-frame-ml,
+.x-btn-default-toolbar-medium-menu-active .x-frame-mr,
+.x-btn-default-toolbar-medium-pressed .x-frame-ml,
+.x-btn-default-toolbar-medium-pressed .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-sides.gif);
+}
+/* line 450, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-menu-active .x-frame-mc,
+.x-btn-default-toolbar-medium-pressed .x-frame-mc {
+  background-color: #d6d6d6;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-fbg.gif);
+}
+
+/* line 465, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-disabled .x-frame-tl,
+.x-btn-default-toolbar-medium-disabled .x-frame-bl,
+.x-btn-default-toolbar-medium-disabled .x-frame-tr,
+.x-btn-default-toolbar-medium-disabled .x-frame-br,
+.x-btn-default-toolbar-medium-disabled .x-frame-tc,
+.x-btn-default-toolbar-medium-disabled .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-disabled-corners.gif);
+}
+/* line 469, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-disabled .x-frame-ml,
+.x-btn-default-toolbar-medium-disabled .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-disabled-sides.gif);
+}
+/* line 472, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-disabled .x-frame-mc {
+  background-color: transparent;
+}
+
+/* line 493, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-medium-over {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-over-bg.gif);
+}
+
+/* line 502, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-medium-focus {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-bg.gif);
+}
+
+/* line 512, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-medium-menu-active,
+.x-nlg .x-btn-default-toolbar-medium-pressed {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-bg.gif);
+}
+
+/* line 541, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-noline.gif);
+  padding-right: 14px;
+}
+/* line 554, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-b-noline.gif);
+  padding-bottom: 14px;
+}
+
+/* line 562, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-over .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-o.gif);
+}
+/* line 570, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-over .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-bo.gif);
+}
+
+/* line 577, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-medium-disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-medium-over:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-medium-over-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-medium-over-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-medium-over-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-medium-over-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-medium-focus:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-medium-focus-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-medium-pressed:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-medium-pressed-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-medium-disabled:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-medium-disabled-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-medium-disabled-sides.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 71, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large {
+  border-color: transparent;
+}
+
+/* line 143, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px 3px 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-mc {
+  background-color: transparent;
+}
+
+/* line 241, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-nbr .x-btn-default-toolbar-large {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+/* line 260, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+body.x-nbr .x-btn-default-toolbar-large {
+  /* Pass along Div/Table, Horz/Vert, border-radius and border-width: */
+  background-image: url("about:blank#th-3-3-3-3-1-1-1-1-3-3-3-3");
+}
+
+/* line 315, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tl {
+  background-position: 0 -6px;
+}
+
+/* line 319, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tr {
+  background-position: right -9px;
+}
+
+/* line 323, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-bl {
+  background-position: 0 -12px;
+}
+
+/* line 327, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-br {
+  background-position: right -15px;
+}
+
+/* line 331, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-ml {
+  background-position: 0 top;
+}
+
+/* line 335, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-mr {
+  background-position: right top;
+}
+
+/* line 339, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tc {
+  background-position: 0 0;
+}
+
+/* line 343, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-bc {
+  background-position: 0 -3px;
+}
+
+/* line 350, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tr,
+.x-btn-default-toolbar-large-br,
+.x-btn-default-toolbar-large-mr {
+  padding-right: 3px;
+}
+
+/* line 356, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tl,
+.x-btn-default-toolbar-large-bl,
+.x-btn-default-toolbar-large-ml {
+  padding-left: 3px;
+}
+
+/* line 360, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tc {
+  height: 3px;
+}
+
+/* line 363, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-bc {
+  height: 3px;
+}
+
+/* line 374, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-tl,
+.x-btn-default-toolbar-large-bl,
+.x-btn-default-toolbar-large-tr,
+.x-btn-default-toolbar-large-br,
+.x-btn-default-toolbar-large-tc,
+.x-btn-default-toolbar-large-bc,
+.x-btn-default-toolbar-large-ml,
+.x-btn-default-toolbar-large-mr {
+  zoom: 1;
+}
+
+/* line 418, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-ml,
+.x-btn-default-toolbar-large-mr {
+  zoom: 1;
+}
+
+/* line 430, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-btn-default-toolbar-large-mc {
+  padding: 1px 1px 1px 1px;
+}
+
+/* line 439, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/frame.scss */
+.x-strict .x-ie7 .x-btn-default-toolbar-large-tl,
+.x-strict .x-ie7 .x-btn-default-toolbar-large-bl {
+  position: relative;
+  right: 0;
+}
+
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-inner {
+  font-size: 11px;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  color: #333333;
+  padding: 0 3px;
+}
+/* line 86, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-arrow {
+  background-image: url(../themes/images/gray/button/arrow.gif);
+}
+/* line 94, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-arrow-right {
+  padding-right: 12px;
+}
+/* line 105, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-arrow-bottom {
+  padding-bottom: 12px;
+}
+/* line 109, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-glyph {
+  font-size: 32px;
+  line-height: 32px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 128, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie8m .x-btn-default-toolbar-large .x-btn-glyph {
+  color: #999999;
+}
+
+/* line 134, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-disabled {
+  border-color: #d7d7d7;
+  background-image: none;
+  background-color: transparent;
+}
+/* line 142, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-disabled .x-btn-inner {
+  color: #8c8c8c;
+}
+
+/* line 160, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon .x-btn-button,
+.x-btn-default-toolbar-large-noicon .x-btn-button {
+  height: 32px;
+}
+/* line 164, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon .x-btn-inner,
+.x-btn-default-toolbar-large-noicon .x-btn-inner {
+  line-height: 32px;
+}
+
+/* line 174, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-toolbar-large-noicon .x-btn-arrow-right .x-btn-inner,
+.x-btn-default-toolbar-large-icon-text-left .x-btn-arrow-right .x-btn-inner {
+  padding-right: 0;
+}
+
+/* line 189, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon .x-btn-inner {
+  width: 32px;
+  padding: 0;
+}
+/* line 195, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon .x-btn-icon-el {
+  width: 32px;
+  height: 32px;
+}
+
+/* line 202, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-left .x-btn-button {
+  height: 32px;
+}
+/* line 207, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-left .x-btn-inner {
+  line-height: 32px;
+  padding-left: 36px;
+}
+/* line 223, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-left .x-btn-icon-el {
+  width: 32px;
+  right: auto;
+}
+/* line 228, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-large-icon-text-left .x-btn-icon-el, .x-quirks .x-btn-default-toolbar-large-icon-text-left .x-btn-icon-el {
+  height: 32px;
+}
+
+/* line 242, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-right .x-btn-button {
+  height: 32px;
+}
+/* line 247, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-right .x-btn-inner {
+  line-height: 32px;
+  padding-right: 36px;
+}
+/* line 259, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-right .x-btn-icon-el {
+  width: 32px;
+  left: auto;
+}
+/* line 264, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-large-icon-text-right .x-btn-icon-el, .x-quirks .x-btn-default-toolbar-large-icon-text-right .x-btn-icon-el {
+  height: 32px;
+}
+
+/* line 278, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-top .x-btn-inner {
+  padding-top: 36px;
+}
+/* line 282, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-top .x-btn-icon-el {
+  height: 32px;
+  bottom: auto;
+}
+/* line 290, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-large-icon-text-top .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-toolbar-large-icon-text-top .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 298, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-bottom .x-btn-inner {
+  padding-bottom: 36px;
+}
+/* line 302, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-icon-text-bottom .x-btn-icon-el {
+  height: 32px;
+  top: auto;
+}
+/* line 310, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-ie6 .x-btn-default-toolbar-large-icon-text-bottom .x-btn-icon-el, .x-quirks .x-ie .x-btn-default-toolbar-large-icon-text-bottom .x-btn-icon-el {
+  width: 100%;
+}
+
+/* line 317, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-over {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f3), color-stop(48%, #ededed), color-stop(52%, #dbdbdb), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -o-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+}
+
+/* line 341, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-focus {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f3), color-stop(48%, #ededed), color-stop(52%, #dbdbdb), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -o-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+  background-image: linear-gradient(top, #f3f3f3, #ededed 48%, #dbdbdb 52%, #e0e0e0);
+}
+
+/* line 366, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-menu-active,
+.x-btn-default-toolbar-large-pressed {
+  border-color: #9d9d9d;
+  background-image: none;
+  background-color: #d6d6d6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d6d6d6), color-stop(48%, #dcdcdc), color-stop(52%, #deb6b7), color-stop(100%, #e1bebf));
+  background-image: -webkit-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -moz-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -o-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: -ms-linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+  background-image: linear-gradient(top, #d6d6d6, #dcdcdc 48%, #deb6b7 52%, #e1bebf);
+}
+
+/* line 398, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-over .x-frame-tl,
+.x-btn-default-toolbar-large-over .x-frame-bl,
+.x-btn-default-toolbar-large-over .x-frame-tr,
+.x-btn-default-toolbar-large-over .x-frame-br,
+.x-btn-default-toolbar-large-over .x-frame-tc,
+.x-btn-default-toolbar-large-over .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-over-corners.gif);
+}
+/* line 402, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-over .x-frame-ml,
+.x-btn-default-toolbar-large-over .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-over-sides.gif);
+}
+/* line 405, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-over .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-over-fbg.gif);
+}
+
+/* line 420, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-focus .x-frame-tl,
+.x-btn-default-toolbar-large-focus .x-frame-bl,
+.x-btn-default-toolbar-large-focus .x-frame-tr,
+.x-btn-default-toolbar-large-focus .x-frame-br,
+.x-btn-default-toolbar-large-focus .x-frame-tc,
+.x-btn-default-toolbar-large-focus .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-focus-corners.gif);
+}
+/* line 424, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-focus .x-frame-ml,
+.x-btn-default-toolbar-large-focus .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-focus-sides.gif);
+}
+/* line 427, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-focus .x-frame-mc {
+  background-color: #f3f3f3;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-focus-fbg.gif);
+}
+
+/* line 443, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-menu-active .x-frame-tl,
+.x-btn-default-toolbar-large-menu-active .x-frame-bl,
+.x-btn-default-toolbar-large-menu-active .x-frame-tr,
+.x-btn-default-toolbar-large-menu-active .x-frame-br,
+.x-btn-default-toolbar-large-menu-active .x-frame-tc,
+.x-btn-default-toolbar-large-menu-active .x-frame-bc,
+.x-btn-default-toolbar-large-pressed .x-frame-tl,
+.x-btn-default-toolbar-large-pressed .x-frame-bl,
+.x-btn-default-toolbar-large-pressed .x-frame-tr,
+.x-btn-default-toolbar-large-pressed .x-frame-br,
+.x-btn-default-toolbar-large-pressed .x-frame-tc,
+.x-btn-default-toolbar-large-pressed .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-corners.gif);
+}
+/* line 447, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-menu-active .x-frame-ml,
+.x-btn-default-toolbar-large-menu-active .x-frame-mr,
+.x-btn-default-toolbar-large-pressed .x-frame-ml,
+.x-btn-default-toolbar-large-pressed .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-sides.gif);
+}
+/* line 450, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-menu-active .x-frame-mc,
+.x-btn-default-toolbar-large-pressed .x-frame-mc {
+  background-color: #d6d6d6;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-fbg.gif);
+}
+
+/* line 465, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-disabled .x-frame-tl,
+.x-btn-default-toolbar-large-disabled .x-frame-bl,
+.x-btn-default-toolbar-large-disabled .x-frame-tr,
+.x-btn-default-toolbar-large-disabled .x-frame-br,
+.x-btn-default-toolbar-large-disabled .x-frame-tc,
+.x-btn-default-toolbar-large-disabled .x-frame-bc {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-disabled-corners.gif);
+}
+/* line 469, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-disabled .x-frame-ml,
+.x-btn-default-toolbar-large-disabled .x-frame-mr {
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-disabled-sides.gif);
+}
+/* line 472, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-disabled .x-frame-mc {
+  background-color: transparent;
+}
+
+/* line 493, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-large-over {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-over-bg.gif);
+}
+
+/* line 502, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-large-focus {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-focus-bg.gif);
+}
+
+/* line 512, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-nlg .x-btn-default-toolbar-large-menu-active,
+.x-nlg .x-btn-default-toolbar-large-pressed {
+  background-repeat: repeat-x;
+  background-image: url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-bg.gif);
+}
+
+/* line 541, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-noline.gif);
+  padding-right: 14px;
+}
+/* line 554, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-b-noline.gif);
+  padding-bottom: 14px;
+}
+
+/* line 562, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-over .x-btn-split-right {
+  background-image: url(../themes/images/gray/button/s-arrow-o.gif);
+}
+/* line 570, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-over .x-btn-split-bottom {
+  background-image: url(../themes/images/gray/button/s-arrow-bo.gif);
+}
+
+/* line 577, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-default-toolbar-large-disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-large-over:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-large-over-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-large-over-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-large-over-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-large-over-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-large-focus:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-large-focus-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-large-focus-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-large-focus-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-large-focus-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-large-pressed:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-sides.gif), frame-bg:url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-fbg.gif), bg:url(../themes/images/gray/btn/btn-default-toolbar-large-pressed-bg.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 78, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-base/sass/etc/mixins/slicer.scss */
+.x-btn-default-toolbar-large-disabled:after {
+  display: none;
+  content: "x-slicer:stretch:bottom, corners:url(../themes/images/gray/btn/btn-default-toolbar-large-disabled-corners.gif), sides:url(../themes/images/gray/btn/btn-default-toolbar-large-disabled-sides.gif)";
+}
+
+/*</if slicer>*/
+/* */
+/* line 981, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-icon-text-left .x-btn-icon-el {
+  background-position: left center;
+}
+
+/* line 993, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-icon-text-right .x-btn-icon-el {
+  background-position: right center;
+}
+
+/* line 1004, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-icon-text-top .x-btn-icon-el {
+  background-position: center top;
+}
+
+/* line 1008, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-icon-text-bottom .x-btn-icon-el {
+  background-position: center bottom;
+}
+
+/* line 1012, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-arrow-right {
+  background-position: right center;
+}
+
+/* line 1022, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-arrow-bottom {
+  background-position: center bottom;
+}
+
+/* line 1026, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-arrow {
+  background-repeat: no-repeat;
+}
+
+/* line 1031, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-split {
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* line 1036, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-split-right {
+  background-position: right center;
+}
+
+/* line 1046, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-btn-split-bottom {
+  background-position: center bottom;
+}
+
+/* line 1050, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/ext-4.2/resources/themes/stylesheets/ext-theme-neutral/sass/src/button/Button.scss */
+.x-cycle-fixed-width .x-btn-inner {
+  text-align: inherit;
+}
+
+/**
+*  This file contains all the xcp variables that is modifiable by the theme editor
+*/
+/** Default font **/
+/** widget selection color **/
+/** Widget Label Text **/
+/** Widget Value Text **/
+/** Widget Title Text **/
+/** Widget Button Text **/
+/** Link Text **/
+/** Widget Interior **/
+/** Widget Border **/
+/** Widget Header **/
+/** ColumnBox Header **/
+/** Widget Button **/
+/** Widget Panel **/
+/** Widget Labels **/
+/** List Selection **/
+/** Framework Tab **/
+/** App Header Background **/
+/** App Menu Background **/
+/** App Menu Border **/
+/** App Menu button **/
+/** App Menu Button Border **/
+/** App Menu marker **/
+/** Nav Menu **/
+/** Case Menu **/
+/** Master Background **/
+/** Page Background **/
+/** Content Area **/
+/** Menu, Context Menu **/
+/** Context menu item **/
+/** load mask **/
+/** Toolbar **/
+/** tab bar **/
+/** tab button **/
+/** ToolTip **/
+/** Window **/
+/** Date picker **/
+/* Box-Shadow for widgets */
+/* line 1, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_checkbox.scss */
+.x-form-cb-label {
+  font-family: Helvetica, Arial, sans-serif;
+  font: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #363636;
+  word-wrap: break-word;
+}
+
+/* line 5, C:/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201412231511/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_checkbox.scss */
+.x-item-disabled .x-form-cb-label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}

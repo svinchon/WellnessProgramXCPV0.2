@@ -30,11 +30,26 @@
   <attributes name="last_data_scan" label="Last Data Scan">
     <type xsi:type="nsAttributeDatatypes:DateTimeType"/>
   </attributes>
+  <attributes name="has_device" label="Has Device">
+    <type xsi:type="nsAttributeDatatypes:BooleanType"/>
+  </attributes>
+  <attributes name="device_id" label="Device Id">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="badge_number" label="Badge Number">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
   <accessControlPolicy inheritedFromParentFolder="true"/>
   <defaultFolderPath/>
   <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_create_member" label="Create Member" implCategoryId="com.emc.xcp.artifact.bo">
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="age" label="Age">
       <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="badge_number" label="Badge Number">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="device_id" label="Device Id">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
     </inputs>
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="email" label="Email">
       <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
@@ -44,6 +59,9 @@
     </inputs>
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="gender" label="Gender">
       <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="has_device" label="Has Device">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
     </inputs>
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="member_id" label="Id">
       <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
@@ -70,6 +88,12 @@
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="age" label="Age">
       <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
     </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="badge_number" label="Badge Number">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="device_id" label="Device Id">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="email" label="Email">
       <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
     </inputs>
@@ -78,6 +102,9 @@
     </inputs>
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="gender" label="Gender">
       <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="has_device" label="Has Device">
+      <attributeType xsi:type="nsAttributeDatatypes:BooleanType"/>
     </inputs>
     <inputs xsi:type="nsDataserviceContract:AttributeElement" name="member_id" label="Id">
       <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
